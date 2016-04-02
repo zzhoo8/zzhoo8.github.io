@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>分享：青石使用阿里云介绍 | zzhoo8的个人博客</title>
+        <title>mac下安装tomcat8 | zzhoo8的个人博客</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../2016/02/how_to_get_born_certification.html" />
+    <link rel="next" href="../../2016/03/install_jetty.html" />
     
     
-    <link rel="prev" href="../../2016/01/resume.html" />
+    <link rel="prev" href="../../2016/02/how_to_get_born_certification.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="3"
-        data-chapter-title="分享：青石使用阿里云介绍"
-        data-filepath="2016/01/aliyun_in_bluestone.md"
+        data-level="5"
+        data-chapter-title="mac下安装tomcat8"
+        data-filepath="2016/03/install_tomcat8.md"
         data-basepath="../.."
         data-revision="Sat Apr 02 2016 16:54:30 GMT+0800 (HKT)"
         data-innerlanguage="">
@@ -112,7 +112,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3" data-path="2016/01/aliyun_in_bluestone.html">
+        <li class="chapter " data-level="3" data-path="2016/01/aliyun_in_bluestone.html">
             
                 
                     <a href="../../2016/01/aliyun_in_bluestone.html">
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="2016/03/install_tomcat8.html">
+        <li class="chapter active" data-level="5" data-path="2016/03/install_tomcat8.html">
             
                 
                     <a href="../../2016/03/install_tomcat8.html">
@@ -235,20 +235,23 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;">&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;</h1>
-<blockquote>
-<p>&#x7ED9;&#x5168;&#x4F53;&#x5F00;&#x53D1;&#x505A;&#x4E86;&#x4E00;&#x6B21;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x5206;&#x4EAB;&#xFF0C;&#x7531;&#x4E8E;&#x65F6;&#x95F4;&#x5173;&#x7CFB;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x963F;&#x91CC;&#x4E91;&#x6240;&#x6709;&#x7684;&#x4EA7;&#x54C1;&#x548C;&#x76EE;&#x524D;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x4EA7;&#x54C1;&#xFF0C;&#x7B97;&#x662F;&#x4E00;&#x4E2A;&#x5165;&#x95E8;&#x4ECB;&#x7ECD;&#x5427;&#x3002;</p>
-</blockquote>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.001.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.002.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.003.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.004.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.005.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.006.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.007.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.008.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.009.jpg" alt=""></p>
-<p><img src="&#x9752;&#x77F3;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x4ECB;&#x7ECD;.010.jpg" alt=""></p>
+                        <h1 id="mac&#x4E0B;&#x5B89;&#x88C5;tomcat8">Mac&#x4E0B;&#x5B89;&#x88C5;tomcat8</h1>
+<pre><code class="lang-bash">&#x279C;  ~ brew install tomcat
+==&gt; Downloading https://www.apache.org/dyn/closer.cgi?path=tomcat/tomcat-<span class="hljs-number">8</span>/v8.<span class="hljs-number">0.32</span>/bin/apache-tomcat-<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>.tar.gz
+==&gt; Best Mirror http://mirrors.cnnic.cn/apache/tomcat/tomcat-<span class="hljs-number">8</span>/v8.<span class="hljs-number">0.32</span>/bin/apache-tomcat-<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>.tar.gz
+<span class="hljs-comment">######################################################################## 100.0%</span>
+&#x1F37A;  /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>: <span class="hljs-number">634</span> files, <span class="hljs-number">12.4</span>M, built <span class="hljs-keyword">in</span> <span class="hljs-number">21</span> seconds
+</code></pre>
+<pre><code class="lang-bash">&#x279C;  ~ <span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/bin
+&#x279C;  bin git:(master) ./startup.sh 
+Using CATALINA_BASE:   /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec
+Using CATALINA_HOME:   /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec
+Using CATALINA_TMPDIR: /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/temp
+Using JRE_HOME:        /Library/Java/JavaVirtualMachines/jdk1.<span class="hljs-number">7.0</span>_75.jdk/Contents/Home
+Using CLASSPATH:       /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/bin/bootstrap.jar:/usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/bin/tomcat-juli.jar
+Tomcat started.
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;<code>http://localhost:8080/</code></p>
 
                     
                     </section>
@@ -259,10 +262,10 @@
         </div>
 
         
-        <a href="../../2016/01/resume.html" class="navigation navigation-prev " aria-label="Previous page: 个人履历"><i class="fa fa-angle-left"></i></a>
+        <a href="../../2016/02/how_to_get_born_certification.html" class="navigation navigation-prev " aria-label="Previous page: 如何使用深圳的生育险"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../2016/02/how_to_get_born_certification.html" class="navigation navigation-next " aria-label="Next page: 如何使用深圳的生育险"><i class="fa fa-angle-right"></i></a>
+        <a href="../../2016/03/install_jetty.html" class="navigation navigation-next " aria-label="Next page: mac下安装jetty"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
