@@ -1,0 +1,945 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>mac下安装play!框架运行环境 | zzhoo8的个人博客</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../../2016/05/find_centos_version.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="13"
+        data-chapter-title="mac下安装play!框架运行环境"
+        data-filepath="2016/05/install_playframework_on_mac.md"
+        data-basepath="../.."
+        data-revision="Tue May 24 2016 23:26:22 GMT+0800 (HKT)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="2016/01/should_start_earlier.html">
+            
+                
+                    <a href="../../2016/01/should_start_earlier.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        开篇有点难
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2016/01/resume.html">
+            
+                
+                    <a href="../../2016/01/resume.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        个人履历
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="2016/01/aliyun_in_bluestone.html">
+            
+                
+                    <a href="../../2016/01/aliyun_in_bluestone.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        分享：青石使用阿里云介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="2016/02/how_to_get_born_certification.html">
+            
+                
+                    <a href="../../2016/02/how_to_get_born_certification.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        如何使用深圳的生育险
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="2016/03/install_tomcat8.html">
+            
+                
+                    <a href="../../2016/03/install_tomcat8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        mac下安装tomcat8
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="2016/03/install_jetty.html">
+            
+                
+                    <a href="../../2016/03/install_jetty.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        mac下安装jetty
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="2016/03/idea_jfinal.html">
+            
+                
+                    <a href="../../2016/03/idea_jfinal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Intellij Idea中运行jfinal工程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="2016/04/bluestone_config_center.html">
+            
+                
+                    <a href="../../2016/04/bluestone_config_center.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        青石配置中心v0.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="2016/04/git_invalid_username_or_password.html">
+            
+                
+                    <a href="../../2016/04/git_invalid_username_or_password.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Git仓库密码错误的解决方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="2016/04/install_docker_on_centos7.html">
+            
+                
+                    <a href="../../2016/04/install_docker_on_centos7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        在Centos7上安装docker运行环境
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="2016/05/update_nodejs.html">
+            
+                
+                    <a href="../../2016/05/update_nodejs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        升级nodejs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="2016/05/find_centos_version.html">
+            
+                
+                    <a href="../../2016/05/find_centos_version.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        查看centos版本
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="13" data-path="2016/05/install_playframework_on_mac.html">
+            
+                
+                    <a href="../../2016/05/install_playframework_on_mac.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        mac下安装play!框架运行环境
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >zzhoo8的个人博客</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="mac&#x4E0B;&#x5B89;&#x88C5;play&#x6846;&#x67B6;">Mac&#x4E0B;&#x5B89;&#x88C5;Play!&#x6846;&#x67B6;</h1>
+<blockquote>
+<p><a href="https://playframework.com" target="_blank">https://playframework.com</a></p>
+</blockquote>
+<h2 id="&#x4E0B;&#x8F7D;&#x6700;&#x5C0F;&#x5316;&#x7684;activator">&#x4E0B;&#x8F7D;&#x6700;&#x5C0F;&#x5316;&#x7684;Activator</h2>
+<p><a href="https://playframework.com/download" target="_blank">https://playframework.com/download</a></p>
+<p>&#x89E3;&#x538B;&#x7F29;&#x5230;&#x53EF;&#x8BBF;&#x95EE;&#x7684;&#x76EE;&#x5F55;&#x4E2D;</p>
+<pre><code class="lang-bash">&#x279C;  Project tree activator-<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>-minimal 
+activator-<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>-minimal
+&#x251C;&#x2500;&#x2500; bin
+&#x2502;   &#x251C;&#x2500;&#x2500; activator
+&#x2502;   &#x2514;&#x2500;&#x2500; activator.bat
+&#x2514;&#x2500;&#x2500; libexec
+    &#x2514;&#x2500;&#x2500; activator-launch-<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>.jar
+
+<span class="hljs-number">2</span> directories, <span class="hljs-number">3</span> files
+</code></pre>
+<p>&#x7CFB;&#x7EDF;&#x8DEF;&#x5F84;&#x52A0;&#x5165;activitor&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x751F;&#x6548;</p>
+<pre><code class="lang-bash">&#x279C;  play vi ~/.bash_profile
+&#x279C;  play <span class="hljs-built_in">source</span> ~/.bash_profile
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;play&#x6846;&#x67B6;&#x4F9D;&#x8D56;">&#x5B89;&#x88C5;play&#x6846;&#x67B6;&#x4F9D;&#x8D56;</h2>
+<p>&#x6267;&#x884C;<code>activator</code>&#xFF0C;&#x5B89;&#x88C5;Play&#x6846;&#x67B6;&#x7684;&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-bash">&#x279C;  bin ./activator
+Getting com.typesafe.activator activator-launcher <span class="hljs-number">1.3</span>.<span class="hljs-number">10</span> ...
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.activator/activator-launcher/<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>/jars/activator-launcher.jar ...
+    [SUCCESSFUL ] com.typesafe.activator<span class="hljs-comment">#activator-launcher;1.3.10!activator-launcher.jar (5251ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/<span class="hljs-number">2.11</span>.<span class="hljs-number">8</span>/scala-library-<span class="hljs-number">2.11</span>.<span class="hljs-number">8</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-library;2.11.8!scala-library.jar (12196ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.activator/activator-props/<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>/jars/activator-props.jar ...
+    [SUCCESSFUL ] com.typesafe.activator<span class="hljs-comment">#activator-props;1.3.10!activator-props.jar (4973ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.activator/activator-ui-common/<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>/jars/activator-ui-common.jar ...
+    [SUCCESSFUL ] com.typesafe.activator<span class="hljs-comment">#activator-ui-common;1.3.10!activator-ui-common.jar (4868ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-sbt/launcher-interface/<span class="hljs-number">1.0</span>.<span class="hljs-number">0</span>-M1/launcher-interface-<span class="hljs-number">1.0</span>.<span class="hljs-number">0</span>-M1.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#launcher-interface;1.0.0-M1!launcher-interface.jar (1337ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.13</span>.<span class="hljs-number">11</span>/jars/completion_2.<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#completion_2.11;0.13.11!completion_2.11.jar (6456ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.activator/activator-templates-cache/<span class="hljs-number">1.0</span><span class="hljs-operator">-a</span>0afb008ea619bf9d87dc010156cddffa8a6f880/jars/activator-templates-cache.jar ...
+    [SUCCESSFUL ] com.typesafe.activator<span class="hljs-comment">#activator-templates-cache;1.0-a0afb008ea619bf9d87dc010156cddffa8a6f880!activator-templates-cache.jar (5815ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.activator/activator-common/<span class="hljs-number">1.0</span><span class="hljs-operator">-a</span>0afb008ea619bf9d87dc010156cddffa8a6f880/jars/activator-common.jar ...
+    [SUCCESSFUL ] com.typesafe.activator<span class="hljs-comment">#activator-common;1.0-a0afb008ea619bf9d87dc010156cddffa8a6f880!activator-common.jar (5854ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.0</span>.<span class="hljs-number">1</span>/scala-xml_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.0</span>.<span class="hljs-number">1</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle) (3696ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.0</span>.<span class="hljs-number">1</span>/scala-parser-combinators_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.0</span>.<span class="hljs-number">1</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-parser-combinators_2.11;1.0.1!scala-parser-combinators_2.11.jar(bundle) (2194ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>/lucene-core-<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] org.apache.lucene<span class="hljs-comment">#lucene-core;4.3.0!lucene-core.jar (8901ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>/lucene-analyzers-common-<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] org.apache.lucene<span class="hljs-comment">#lucene-analyzers-common;4.3.0!lucene-analyzers-common.jar (8628ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>/lucene-queryparser-<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] org.apache.lucene<span class="hljs-comment">#lucene-queryparser;4.3.0!lucene-queryparser.jar (3276ms)</span>
+downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.3</span>.<span class="hljs-number">9</span>/akka-actor_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.3</span>.<span class="hljs-number">9</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.akka<span class="hljs-comment">#akka-actor_2.11;2.3.9!akka-actor_2.11.jar (11313ms)</span>
+downloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/<span class="hljs-number">1.3</span>.<span class="hljs-number">29</span>/aws-java-sdk-<span class="hljs-number">1.3</span>.<span class="hljs-number">29</span>.jar ...
+    [SUCCESSFUL ] com.amazonaws<span class="hljs-comment">#aws-java-sdk;1.3.29!aws-java-sdk.jar (59330ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/commons/commons-compress/<span class="hljs-number">1.4</span>.<span class="hljs-number">1</span>/commons-compress-<span class="hljs-number">1.4</span>.<span class="hljs-number">1</span>.jar ...
+    [SUCCESSFUL ] org.apache.commons<span class="hljs-comment">#commons-compress;1.4.1!commons-compress.jar (1984ms)</span>
+downloading https://repo1.maven.org/maven2/org/tukaani/xz/<span class="hljs-number">1.0</span>/xz-<span class="hljs-number">1.0</span>.jar ...
+    [SUCCESSFUL ] org.tukaani<span class="hljs-comment">#xz;1.0!xz.jar (2147ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/lucene/lucene-queries/<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>/lucene-queries-<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] org.apache.lucene<span class="hljs-comment">#lucene-queries;4.3.0!lucene-queries.jar (2130ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/lucene/lucene-sandbox/<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>/lucene-sandbox-<span class="hljs-number">4.3</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] org.apache.lucene<span class="hljs-comment">#lucene-sandbox;4.3.0!lucene-sandbox.jar (969ms)</span>
+downloading https://repo1.maven.org/maven2/jakarta-regexp/jakarta-regexp/<span class="hljs-number">1.4</span>/jakarta-regexp-<span class="hljs-number">1.4</span>.jar ...
+    [SUCCESSFUL ] jakarta-regexp<span class="hljs-comment">#jakarta-regexp;1.4!jakarta-regexp.jar (1015ms)</span>
+downloading https://repo1.maven.org/maven2/com/typesafe/config/<span class="hljs-number">1.2</span>.<span class="hljs-number">1</span>/config-<span class="hljs-number">1.2</span>.<span class="hljs-number">1</span>.jar ...
+    [SUCCESSFUL ] com.typesafe<span class="hljs-comment">#config;1.2.1!config.jar(bundle) (1217ms)</span>
+downloading https://repo1.maven.org/maven2/commons-logging/commons-logging/<span class="hljs-number">1.1</span>.<span class="hljs-number">1</span>/commons-logging-<span class="hljs-number">1.1</span>.<span class="hljs-number">1</span>.jar ...
+    [SUCCESSFUL ] commons-logging<span class="hljs-comment">#commons-logging;1.1.1!commons-logging.jar (1051ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/<span class="hljs-number">4.1</span>/httpclient-<span class="hljs-number">4.1</span>.jar ...
+    [SUCCESSFUL ] org.apache.httpcomponents<span class="hljs-comment">#httpclient;4.1!httpclient.jar (1396ms)</span>
+downloading https://repo1.maven.org/maven2/commons-codec/commons-codec/<span class="hljs-number">1.3</span>/commons-codec-<span class="hljs-number">1.3</span>.jar ...
+    [SUCCESSFUL ] commons-codec<span class="hljs-comment">#commons-codec;1.3!commons-codec.jar (974ms)</span>
+downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/<span class="hljs-number">1.8</span>.<span class="hljs-number">9</span>/jackson-core-asl-<span class="hljs-number">1.8</span>.<span class="hljs-number">9</span>.jar ...
+    [SUCCESSFUL ] org.codehaus.jackson<span class="hljs-comment">#jackson-core-asl;1.8.9!jackson-core-asl.jar (1157ms)</span>
+downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/<span class="hljs-number">1.8</span>.<span class="hljs-number">9</span>/jackson-mapper-asl-<span class="hljs-number">1.8</span>.<span class="hljs-number">9</span>.jar ...
+    [SUCCESSFUL ] org.codehaus.jackson<span class="hljs-comment">#jackson-mapper-asl;1.8.9!jackson-mapper-asl.jar (2004ms)</span>
+downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/<span class="hljs-number">4.1</span>/httpcore-<span class="hljs-number">4.1</span>.jar ...
+    [SUCCESSFUL ] org.apache.httpcomponents<span class="hljs-comment">#httpcore;4.1!httpcore.jar (1361ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.13</span>.<span class="hljs-number">11</span>/jars/collections_2.<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#collections_2.11;0.13.11!collections_2.11.jar (11300ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.13</span>.<span class="hljs-number">11</span>/jars/control_2.<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#control_2.11;0.13.11!control_2.11.jar (5002ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.13</span>.<span class="hljs-number">11</span>/jars/io_2.<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#io_2.11;0.13.11!io_2.11.jar (6032ms)</span>
+downloading https://repo1.maven.org/maven2/jline/jline/<span class="hljs-number">2.13</span>/jline-<span class="hljs-number">2.13</span>.jar ...
+    [SUCCESSFUL ] jline<span class="hljs-comment">#jline;2.13!jline.jar (2305ms)</span>
+downloading https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/<span class="hljs-number">1.11</span>/jansi-<span class="hljs-number">1.11</span>.jar ...
+    [SUCCESSFUL ] org.fusesource.jansi<span class="hljs-comment">#jansi;1.11!jansi.jar (1445ms)</span>
+:: retrieving :: org.scala-sbt<span class="hljs-comment">#boot-app</span>
+    confs: [default]
+    <span class="hljs-number">31</span> artifacts copied, <span class="hljs-number">0</span> already retrieved (<span class="hljs-number">20211</span>kB/<span class="hljs-number">65</span>ms)
+Getting Scala <span class="hljs-number">2.11</span>.<span class="hljs-number">8</span> (<span class="hljs-keyword">for</span> activator-launcher)...
+downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/<span class="hljs-number">2.11</span>.<span class="hljs-number">8</span>/scala-compiler-<span class="hljs-number">2.11</span>.<span class="hljs-number">8</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-compiler;2.11.8!scala-compiler.jar (155709ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/<span class="hljs-number">2.11</span>.<span class="hljs-number">8</span>/scala-reflect-<span class="hljs-number">2.11</span>.<span class="hljs-number">8</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-reflect;2.11.8!scala-reflect.jar (53000ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.0</span>.<span class="hljs-number">4</span>/scala-xml_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.0</span>.<span class="hljs-number">4</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle) (10080ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.0</span>.<span class="hljs-number">4</span>/scala-parser-combinators_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.0</span>.<span class="hljs-number">4</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle) (7872ms)</span>
+downloading https://repo1.maven.org/maven2/jline/jline/<span class="hljs-number">2.12</span>.<span class="hljs-number">1</span>/jline-<span class="hljs-number">2.12</span>.<span class="hljs-number">1</span>.jar ...
+    [SUCCESSFUL ] jline<span class="hljs-comment">#jline;2.12.1!jline.jar (3135ms)</span>
+:: retrieving :: org.scala-sbt<span class="hljs-comment">#boot-scala</span>
+    confs: [default]
+    <span class="hljs-number">6</span> artifacts copied, <span class="hljs-number">0</span> already retrieved (<span class="hljs-number">26456</span>kB/<span class="hljs-number">82</span>ms)
+ Did not detect an activator project <span class="hljs-keyword">in</span> this directory.
+ - activator
+ Load an existing project (has to be executed from the project directory)
+ or <span class="hljs-built_in">print</span> this <span class="hljs-built_in">help</span> message <span class="hljs-keyword">if</span> no project is found
+
+ Sub-commands
+ - activator ui
+ Open the project <span class="hljs-keyword">in</span> the UI <span class="hljs-keyword">if</span> executed from an existing project
+ directory, otherwise open a project-creation UI.
+
+ - activator new [project-name] [template-name]
+ Create a new project, prompting <span class="hljs-keyword">for</span> project-name <span class="hljs-keyword">if</span> missing and helping you
+ find a template <span class="hljs-keyword">if</span> template-name is not provided.
+
+ - activator list-templates
+ Fetch the latest template list and <span class="hljs-built_in">print</span> it to the console.
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;activator-ui&#x4F9D;&#x8D56;">&#x5B89;&#x88C5;activator ui&#x4F9D;&#x8D56;</h2>
+<p>&#x4F7F;&#x7528;<code>activator new</code>&#x4F1A;&#x51FA;&#x9519;</p>
+<pre><code class="lang-bash">&#x279C;  play activator new
+
+Fetching the latest list of templates...
+
+Browse the list of templates: http://lightbend.com/activator/templates
+Choose from these featured templates or enter a template name:
+  <span class="hljs-number">1</span>) minimal-akka-java-seed
+  <span class="hljs-number">2</span>) minimal-akka-scala-seed
+  <span class="hljs-number">3</span>) minimal-java
+  <span class="hljs-number">4</span>) minimal-scala
+  <span class="hljs-number">5</span>) play-java
+  <span class="hljs-number">6</span>) play-scala
+(hit tab to see a list of all templates)
+&gt; <span class="hljs-number">3</span>
+Enter a name <span class="hljs-keyword">for</span> your application (just press enter <span class="hljs-keyword">for</span> <span class="hljs-string">&apos;minimal-java&apos;</span>)
+&gt; 
+OK, application <span class="hljs-string">&quot;minimal-java&quot;</span> is being created using the <span class="hljs-string">&quot;minimal-java&quot;</span> template.
+
+[ERROR] [<span class="hljs-number">05</span>/<span class="hljs-number">12</span>/<span class="hljs-number">2016</span> <span class="hljs-number">16</span>:<span class="hljs-number">11</span>:<span class="hljs-number">43.598</span>] [default-akka.actor.default-dispatcher-<span class="hljs-number">3</span>] [ActorSystem(default)] Failed to download http://downloads.typesafe.com/typesafe-activator/templates/<span class="hljs-number">9</span>c/<span class="hljs-number">9</span>cbaa2/<span class="hljs-number">9</span>cbaa284-<span class="hljs-number">7</span>f8c-<span class="hljs-number">4</span>ef2-b48e-fc3ee73a11eb.zip: sbt.TranslatedIOException: Error opening http://downloads.typesafe.com/typesafe-activator/templates/<span class="hljs-number">9</span>c/<span class="hljs-number">9</span>cbaa2/<span class="hljs-number">9</span>cbaa284-<span class="hljs-number">7</span>f8c-<span class="hljs-number">4</span>ef2-b48e-fc3ee73a11eb.zip: java.net.UnknownHostException: downloads.typesafe.com
+[WARN] [<span class="hljs-number">05</span>/<span class="hljs-number">12</span>/<span class="hljs-number">2016</span> <span class="hljs-number">16</span>:<span class="hljs-number">11</span>:<span class="hljs-number">43.600</span>] [default-akka.actor.default-dispatcher-<span class="hljs-number">3</span>] [akka://default/user/template-cache] Unable to download template: <span class="hljs-number">9</span>cbaa284-<span class="hljs-number">7</span>f8c-<span class="hljs-number">4</span>ef2-b48e-fc3ee73a11eb: activator.templates.repository.RepositoryException: Failed to download http://downloads.typesafe.com/typesafe-activator/templates/<span class="hljs-number">9</span>c/<span class="hljs-number">9</span>cbaa2/<span class="hljs-number">9</span>cbaa284-<span class="hljs-number">7</span>f8c-<span class="hljs-number">4</span>ef2-b48e-fc3ee73a11eb.zip: sbt.TranslatedIOException: Error opening http://downloads.typesafe.com/typesafe-activator/templates/<span class="hljs-number">9</span>c/<span class="hljs-number">9</span>cbaa2/<span class="hljs-number">9</span>cbaa284-<span class="hljs-number">7</span>f8c-<span class="hljs-number">4</span>ef2-b48e-fc3ee73a11eb.zip: java.net.UnknownHostException: downloads.typesafe.com
+ProcessError(Template <span class="hljs-number">9</span>cbaa284-<span class="hljs-number">7</span>f8c-<span class="hljs-number">4</span>ef2-b48e-fc3ee73a11eb not found, or unable to be downloaded.,Some(java.lang.RuntimeException: Template <span class="hljs-number">9</span>cbaa284-<span class="hljs-number">7</span>f8c-<span class="hljs-number">4</span>ef2-b48e-fc3ee73a11eb not found, or unable to be downloaded.))
+Failed to <span class="hljs-built_in">clone</span> the template. Make sure you have internet access and please try again.
+</code></pre>
+<pre><code class="lang-bash">&#x279C;  play activator ui
+Getting com.typesafe.activator activator-ui <span class="hljs-number">1.3</span>.<span class="hljs-number">10</span> ...
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.activator/activator-ui/<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>/jars/activator-ui.jar ...
+    [SUCCESSFUL ] com.typesafe.activator<span class="hljs-comment">#activator-ui;1.3.10!activator-ui.jar (155294ms)</span>
+downloading https://repo.typesafe.com/typesafe/releases/com/typesafe/activator/analytics_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.1</span>.<span class="hljs-number">8</span>/analytics_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.1</span>.<span class="hljs-number">8</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.activator<span class="hljs-comment">#analytics_2.11;0.1.8!analytics_2.11.jar (9668ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbtrc/client-<span class="hljs-number">2</span>-<span class="hljs-number">11</span>/<span class="hljs-number">0.3</span>.<span class="hljs-number">5</span>/jars/client-<span class="hljs-number">2</span>-<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.sbtrc<span class="hljs-comment">#client-2-11;0.3.5!client-2-11.jar (58470ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbtrc/integration-tests/<span class="hljs-number">0.3</span>.<span class="hljs-number">5</span>/jars/integration-tests.jar ...
+    [SUCCESSFUL ] com.typesafe.sbtrc<span class="hljs-comment">#integration-tests;0.3.5!integration-tests.jar (6445ms)</span>
+downloading https://repo.typesafe.com/typesafe/releases/com/typesafe/trace/<span class="hljs-built_in">echo</span>-collect211/<span class="hljs-number">0.1</span>.<span class="hljs-number">12</span>/<span class="hljs-built_in">echo</span>-collect211-<span class="hljs-number">0.1</span>.<span class="hljs-number">12</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.trace<span class="hljs-comment">#echo-collect211;0.1.12!echo-collect211.jar (4350ms)</span>
+downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/<span class="hljs-number">1.9</span>.<span class="hljs-number">13</span>/jackson-core-asl-<span class="hljs-number">1.9</span>.<span class="hljs-number">13</span>.jar ...
+    [SUCCESSFUL ] org.codehaus.jackson<span class="hljs-comment">#jackson-core-asl;1.9.13!jackson-core-asl.jar (4654ms)</span>
+downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/<span class="hljs-number">1.9</span>.<span class="hljs-number">13</span>/jackson-mapper-asl-<span class="hljs-number">1.9</span>.<span class="hljs-number">13</span>.jar ...
+    [SUCCESSFUL ] org.codehaus.jackson<span class="hljs-comment">#jackson-mapper-asl;1.9.13!jackson-mapper-asl.jar (2213ms)</span>
+downloading https://repo1.maven.org/maven2/io/spray/spray-can_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>/spray-can_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>.jar ...
+    [SUCCESSFUL ] io.spray<span class="hljs-comment">#spray-can_2.11;1.3.2!spray-can_2.11.jar(bundle) (2401ms)</span>
+downloading https://repo.typesafe.com/typesafe/releases/com/typesafe/trace/<span class="hljs-built_in">echo</span>-event211-protobuf25_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.1</span>.<span class="hljs-number">12</span>/<span class="hljs-built_in">echo</span>-event211-protobuf25_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.1</span>.<span class="hljs-number">12</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.trace<span class="hljs-comment">#echo-event211-protobuf25_2.11;0.1.12!echo-event211-protobuf25_2.11.jar (5099ms)</span>
+downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.3</span>.<span class="hljs-number">9</span>/akka-slf4j_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.3</span>.<span class="hljs-number">9</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.akka<span class="hljs-comment">#akka-slf4j_2.11;2.3.9!akka-slf4j_2.11.jar (1529ms)</span>
+downloading https://repo.typesafe.com/typesafe/releases/com/typesafe/trace/<span class="hljs-built_in">echo</span>-trace-protocol-protobuf25/<span class="hljs-number">0.1</span>.<span class="hljs-number">12</span>/<span class="hljs-built_in">echo</span>-trace-protocol-protobuf25-<span class="hljs-number">0.1</span>.<span class="hljs-number">12</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.trace<span class="hljs-comment">#echo-trace-protocol-protobuf25;0.1.12!echo-trace-protocol-protobuf25.jar (7892ms)</span>
+downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/<span class="hljs-number">2.5</span>.<span class="hljs-number">0</span>/protobuf-java-<span class="hljs-number">2.5</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] com.google.protobuf<span class="hljs-comment">#protobuf-java;2.5.0!protobuf-java.jar(bundle) (3801ms)</span>
+downloading https://repo1.maven.org/maven2/io/spray/spray-io_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>/spray-io_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>.jar ...
+    [SUCCESSFUL ] io.spray<span class="hljs-comment">#spray-io_2.11;1.3.2!spray-io_2.11.jar(bundle) (2217ms)</span>
+downloading https://repo1.maven.org/maven2/io/spray/spray-http_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>/spray-http_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>.jar ...
+    [SUCCESSFUL ] io.spray<span class="hljs-comment">#spray-http_2.11;1.3.2!spray-http_2.11.jar(bundle) (11100ms)</span>
+downloading https://repo1.maven.org/maven2/io/spray/spray-util_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>/spray-util_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.3</span>.<span class="hljs-number">2</span>.jar ...
+    [SUCCESSFUL ] io.spray<span class="hljs-comment">#spray-util_2.11;1.3.2!spray-util_2.11.jar(bundle) (1803ms)</span>
+downloading https://repo1.maven.org/maven2/org/parboiled/parboiled-scala_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.1</span>.<span class="hljs-number">6</span>/parboiled-scala_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.1</span>.<span class="hljs-number">6</span>.jar ...
+    [SUCCESSFUL ] org.parboiled<span class="hljs-comment">#parboiled-scala_2.11;1.1.6!parboiled-scala_2.11.jar(bundle) (2370ms)</span>
+downloading https://repo1.maven.org/maven2/org/parboiled/parboiled-core/<span class="hljs-number">1.1</span>.<span class="hljs-number">6</span>/parboiled-core-<span class="hljs-number">1.1</span>.<span class="hljs-number">6</span>.jar ...
+    [SUCCESSFUL ] org.parboiled<span class="hljs-comment">#parboiled-core;1.1.6!parboiled-core.jar(bundle) (2156ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-sbt/serialization_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.1</span>.<span class="hljs-number">2</span>/serialization_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.1</span>.<span class="hljs-number">2</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#serialization_2.11;0.1.2!serialization_2.11.jar (2011ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/<span class="hljs-number">0.13</span>.<span class="hljs-number">8</span>/jars/launcher-interface.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#launcher-interface;0.13.8!launcher-interface.jar (5325ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/<span class="hljs-number">0.13</span>.<span class="hljs-number">8</span>/jars/interface.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#interface;0.13.8!interface.jar (5265ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.13</span>.<span class="hljs-number">8</span>/jars/io_2.<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#io_2.11;0.13.8!io_2.11.jar (5899ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.13</span>.<span class="hljs-number">8</span>/jars/collections_2.<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#collections_2.11;0.13.8!collections_2.11.jar (6324ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.10</span>.<span class="hljs-number">1</span>/scala-pickling_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.10</span>.<span class="hljs-number">1</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-pickling_2.11;0.10.1!scala-pickling_2.11.jar (3515ms)</span>
+downloading https://repo1.maven.org/maven2/org/json4s/json4s-core_2.<span class="hljs-number">11</span>/<span class="hljs-number">3.2</span>.<span class="hljs-number">10</span>/json4s-core_2.<span class="hljs-number">11</span>-<span class="hljs-number">3.2</span>.<span class="hljs-number">10</span>.jar ...
+    [SUCCESSFUL ] org.json4s<span class="hljs-comment">#json4s-core_2.11;3.2.10!json4s-core_2.11.jar (1565ms)</span>
+downloading https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.6</span>.<span class="hljs-number">0</span>/jawn-parser_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.6</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] org.spire-math<span class="hljs-comment">#jawn-parser_2.11;0.6.0!jawn-parser_2.11.jar (876ms)</span>
+downloading https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.6</span>.<span class="hljs-number">0</span>/json4s-support_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.6</span>.<span class="hljs-number">0</span>.jar ...
+    [SUCCESSFUL ] org.spire-math<span class="hljs-comment">#json4s-support_2.11;0.6.0!json4s-support_2.11.jar (872ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/<span class="hljs-number">2.11</span>.<span class="hljs-number">6</span>/scala-compiler-<span class="hljs-number">2.11</span>.<span class="hljs-number">6</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-compiler;2.11.6!scala-compiler.jar (18396ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/<span class="hljs-number">2.11</span>.<span class="hljs-number">6</span>/scala-reflect-<span class="hljs-number">2.11</span>.<span class="hljs-number">6</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-reflect;2.11.6!scala-reflect.jar (8920ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.0</span>.<span class="hljs-number">2</span>/scala-parser-combinators_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.0</span>.<span class="hljs-number">2</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-parser-combinators_2.11;1.0.2!scala-parser-combinators_2.11.jar(bundle) (1596ms)</span>
+downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.0</span>.<span class="hljs-number">3</span>/scala-xml_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.0</span>.<span class="hljs-number">3</span>.jar ...
+    [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(bundle) (2358ms)</span>
+downloading https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.<span class="hljs-number">11</span>/<span class="hljs-number">3.2</span>.<span class="hljs-number">10</span>/json4s-ast_2.<span class="hljs-number">11</span>-<span class="hljs-number">3.2</span>.<span class="hljs-number">10</span>.jar ...
+    [SUCCESSFUL ] org.json4s<span class="hljs-comment">#json4s-ast_2.11;3.2.10!json4s-ast_2.11.jar (871ms)</span>
+downloading https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/<span class="hljs-number">2.6</span>/paranamer-<span class="hljs-number">2.6</span>.jar ...
+    [SUCCESSFUL ] com.thoughtworks.paranamer<span class="hljs-comment">#paranamer;2.6!paranamer.jar (887ms)</span>
+downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.13</span>.<span class="hljs-number">8</span>/jars/control_2.<span class="hljs-number">11</span>.jar ...
+    [SUCCESSFUL ] org.scala-sbt<span class="hljs-comment">#control_2.11;0.13.8!control_2.11.jar (6594ms)</span>
+downloading https://repo.typesafe.com/typesafe/releases/com/typesafe/sbt/client-all-<span class="hljs-number">2</span>-<span class="hljs-number">11</span>/<span class="hljs-number">0.3</span>.<span class="hljs-number">5</span>/client-all-<span class="hljs-number">2</span>-<span class="hljs-number">11</span>-<span class="hljs-number">0.3</span>.<span class="hljs-number">5</span>.jar ...
+    [SUCCESSFUL ] com.typesafe.sbt<span class="hljs-comment">#client-all-2-11;0.3.5!client-all-2-11.jar (165707ms)</span>
+:: retrieving :: org.scala-sbt<span class="hljs-comment">#boot-app</span>
+    confs: [default]
+    <span class="hljs-number">91</span> artifacts copied, <span class="hljs-number">0</span> already retrieved (<span class="hljs-number">79919</span>kB/<span class="hljs-number">539</span>ms)
+Local repository: activator-launcher-local @ file:/Users/zzhoo8/Project/activator-<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>-minimal/repository
+Play server process ID is <span class="hljs-number">10686</span>
+[info] play - Application started (Prod)
+[info] play - Listening <span class="hljs-keyword">for</span> HTTP on /<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8888</span>
+[info] a.e.s.Slf4jLogger - Slf4jLogger started
+</code></pre>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x6253;&#x5F00;<code>http://127.0.0.1:8888/home</code>&#xFF0C;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x548C;&#x8DEF;&#x5F84;enjoy app&#x5427;</p>
+<h2 id="&#x8FD0;&#x884C;app">&#x8FD0;&#x884C;APP</h2>
+<p>&#x8FD0;&#x884C;<code>activator run</code>&#x8FD0;&#x884C;APP</p>
+<pre><code class="lang-bash">&#x279C;  play-java activator run
+[info] Loading project definition from /Users/zzhoo8/Project/play-java/project
+[info] Set current project to play-java (<span class="hljs-keyword">in</span> build file:/Users/zzhoo8/Project/play-java/)
+java.lang.UnsupportedClassVersionError: com/typesafe/config/ConfigException : Unsupported major.minor version <span class="hljs-number">52.0</span>
+    at java.lang.ClassLoader.defineClass1(Native Method)
+    at java.lang.ClassLoader.defineClass(ClassLoader.java:<span class="hljs-number">800</span>)
+    at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:<span class="hljs-number">142</span>)
+    at java.net.URLClassLoader.defineClass(URLClassLoader.java:<span class="hljs-number">449</span>)
+    at java.net.URLClassLoader.access<span class="hljs-variable">$100</span>(URLClassLoader.java:<span class="hljs-number">71</span>)
+    at java.net.URLClassLoader<span class="hljs-variable">$1</span>.run(URLClassLoader.java:<span class="hljs-number">361</span>)
+    at java.net.URLClassLoader<span class="hljs-variable">$1</span>.run(URLClassLoader.java:<span class="hljs-number">355</span>)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.net.URLClassLoader.findClass(URLClassLoader.java:<span class="hljs-number">354</span>)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:<span class="hljs-number">425</span>)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:<span class="hljs-number">358</span>)
+    at com.typesafe.sbt.web.SbtWeb$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$com</span><span class="hljs-variable">$typesafe</span><span class="hljs-variable">$sbt</span><span class="hljs-variable">$web</span><span class="hljs-variable">$SbtWeb</span>$<span class="hljs-variable">$load</span><span class="hljs-variable">$1</span>.apply(SbtWeb.scala:<span class="hljs-number">559</span>)
+    at com.typesafe.sbt.web.SbtWeb$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$com</span><span class="hljs-variable">$typesafe</span><span class="hljs-variable">$sbt</span><span class="hljs-variable">$web</span><span class="hljs-variable">$SbtWeb</span>$<span class="hljs-variable">$load</span><span class="hljs-variable">$1</span>.apply(SbtWeb.scala:<span class="hljs-number">559</span>)
+    at scala.Option.fold(Option.scala:<span class="hljs-number">157</span>)
+    at com.typesafe.sbt.web.SbtWeb$.com<span class="hljs-variable">$typesafe</span><span class="hljs-variable">$sbt</span><span class="hljs-variable">$web</span><span class="hljs-variable">$SbtWeb</span>$<span class="hljs-variable">$load</span>(SbtWeb.scala:<span class="hljs-number">573</span>)
+    at com.typesafe.sbt.web.SbtWeb$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$globalSettings</span><span class="hljs-variable">$1</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$1</span>.apply(SbtWeb.scala:<span class="hljs-number">143</span>)
+    at com.typesafe.sbt.web.SbtWeb$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$globalSettings</span><span class="hljs-variable">$1</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$1</span>.apply(SbtWeb.scala:<span class="hljs-number">143</span>)
+    at scala.Function1$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$andThen</span><span class="hljs-variable">$1</span>.apply(Function1.scala:<span class="hljs-number">55</span>)
+    at sbt.Project$.setProject(Project.scala:<span class="hljs-number">319</span>)
+    at sbt.BuiltinCommands$.doLoadProject(Main.scala:<span class="hljs-number">503</span>)
+    at sbt.BuiltinCommands$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$loadProjectImpl</span><span class="hljs-variable">$2</span>.apply(Main.scala:<span class="hljs-number">484</span>)
+    at sbt.BuiltinCommands$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$loadProjectImpl</span><span class="hljs-variable">$2</span>.apply(Main.scala:<span class="hljs-number">484</span>)
+    at sbt.Command$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$applyEffect</span><span class="hljs-variable">$1</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$2</span>.apply(Command.scala:<span class="hljs-number">59</span>)
+    at sbt.Command$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$applyEffect</span><span class="hljs-variable">$1</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$2</span>.apply(Command.scala:<span class="hljs-number">59</span>)
+    at sbt.Command$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$applyEffect</span><span class="hljs-variable">$2</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$3</span>.apply(Command.scala:<span class="hljs-number">61</span>)
+    at sbt.Command$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$applyEffect</span><span class="hljs-variable">$2</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$3</span>.apply(Command.scala:<span class="hljs-number">61</span>)
+    at sbt.Command$.process(Command.scala:<span class="hljs-number">93</span>)
+    at sbt.MainLoop$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$1</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$1</span>.apply(MainLoop.scala:<span class="hljs-number">96</span>)
+    at sbt.MainLoop$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$1</span>$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$1</span>.apply(MainLoop.scala:<span class="hljs-number">96</span>)
+    at sbt.State$<span class="hljs-variable">$anon</span><span class="hljs-variable">$1</span>.process(State.scala:<span class="hljs-number">184</span>)
+    at sbt.MainLoop$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$1</span>.apply(MainLoop.scala:<span class="hljs-number">96</span>)
+    at sbt.MainLoop$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$1</span>.apply(MainLoop.scala:<span class="hljs-number">96</span>)
+    at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:<span class="hljs-number">17</span>)
+    at sbt.MainLoop$.next(MainLoop.scala:<span class="hljs-number">96</span>)
+    at sbt.MainLoop$.run(MainLoop.scala:<span class="hljs-number">89</span>)
+    at sbt.MainLoop$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$runWithNewLog</span><span class="hljs-variable">$1</span>.apply(MainLoop.scala:<span class="hljs-number">68</span>)
+    at sbt.MainLoop$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$runWithNewLog</span><span class="hljs-variable">$1</span>.apply(MainLoop.scala:<span class="hljs-number">63</span>)
+    at sbt.Using.apply(Using.scala:<span class="hljs-number">24</span>)
+    at sbt.MainLoop$.runWithNewLog(MainLoop.scala:<span class="hljs-number">63</span>)
+    at sbt.MainLoop$.runAndClearLast(MainLoop.scala:<span class="hljs-number">46</span>)
+    at sbt.MainLoop$.runLoggedLoop(MainLoop.scala:<span class="hljs-number">30</span>)
+    at sbt.MainLoop$.runLogged(MainLoop.scala:<span class="hljs-number">22</span>)
+    at sbt.StandardMain$.runManaged(Main.scala:<span class="hljs-number">54</span>)
+    at sbt.xMain.run(Main.scala:<span class="hljs-number">29</span>)
+    at xsbt.boot.Launch$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$run</span><span class="hljs-variable">$1</span>.apply(Launch.scala:<span class="hljs-number">109</span>)
+    at xsbt.boot.Launch$.withContextLoader(Launch.scala:<span class="hljs-number">128</span>)
+    at xsbt.boot.Launch$.run(Launch.scala:<span class="hljs-number">109</span>)
+    at xsbt.boot.Launch$<span class="hljs-variable">$anonfun</span><span class="hljs-variable">$apply</span><span class="hljs-variable">$1</span>.apply(Launch.scala:<span class="hljs-number">35</span>)
+    at xsbt.boot.Launch$.launch(Launch.scala:<span class="hljs-number">117</span>)
+    at xsbt.boot.Launch$.apply(Launch.scala:<span class="hljs-number">18</span>)
+    at xsbt.boot.Boot$.runImpl(Boot.scala:<span class="hljs-number">41</span>)
+    at xsbt.boot.Boot$.main(Boot.scala:<span class="hljs-number">17</span>)
+    at xsbt.boot.Boot.main(Boot.scala)
+[error] java.lang.UnsupportedClassVersionError: com/typesafe/config/ConfigException : Unsupported major.minor version <span class="hljs-number">52.0</span>
+[error] Use <span class="hljs-string">&apos;last&apos;</span> <span class="hljs-keyword">for</span> the full log.
+Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? i
+[warn] Ignoring load failure: no project loaded.
+[error] Not a valid <span class="hljs-built_in">command</span>: run (similar: plugin)
+[error] run
+[error]    ^
+</code></pre>
+<p>&#x62A5;&#x9519;&#x662F;&#x56E0;&#x4E3A;&#x672C;&#x673A;&#x7684;Java&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x662F;1.7&#x7684;&#xFF0C;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x9700;&#x8981;1.8&#x7248;&#x672C;</p>
+<p>&#x5B89;&#x88C5;JDK1.8<code>http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</code></p>
+<p>&#x4FEE;&#x6539;~/.bash_profile&#xFF0C;&#x52A0;&#x5165;&#x6B63;&#x786E;&#x7684;JAVA_HOME</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">export</span> PATH=/Users/zzhoo8/Library/Android/sdk/platform-tools:/Users/zzhoo8/Project/activator-<span class="hljs-number">1.3</span>.<span class="hljs-number">10</span>-minimal/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-comment"># export JAVA_HOME=&quot;/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home&quot;</span>
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">source</span> ~/.bash_profile
+
+&#x279C;  bin java -version
+java version <span class="hljs-string">&quot;1.8.0_91&quot;</span>
+Java(TM) SE Runtime Environment (build <span class="hljs-number">1.8</span>.<span class="hljs-number">0</span>_91-b14)
+Java HotSpot(TM) <span class="hljs-number">64</span>-Bit Server VM (build <span class="hljs-number">25.91</span>-b14, mixed mode)
+&#x279C;  bin javac -version
+javac <span class="hljs-number">1.8</span>.<span class="hljs-number">0</span>_91
+</code></pre>
+<p>play&#x6846;&#x67B6;&#x7EC8;&#x4E8E;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x4E86;&#x3002;</p>
+<pre><code class="lang-bash">&#x279C;  play-java bin/activator run        
+[info] Loading project definition from /Users/zzhoo8/Project/play-java/project
+[info] Set current project to play-java (<span class="hljs-keyword">in</span> build file:/Users/zzhoo8/Project/play-java/)
+[info] Updating {file:/Users/zzhoo8/Project/play-java/}root...
+[info] Resolving jline<span class="hljs-comment">#jline;2.12.1 ...</span>
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/<span class="hljs-number">2.11</span>.<span class="hljs-number">7</span>/scala-library-<span class="hljs-number">2.11</span>.<span class="hljs-number">7</span>.jar ...
+[info]     [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-library;2.11.7!scala-library.jar (167303ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.1</span>.<span class="hljs-number">1</span>/twirl-api_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.1</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#twirl-api_2.11;1.1.1!twirl-api_2.11.jar (1865ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-server_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-server_2.11;2.5.3!play-server_2.11.jar (7221ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-java_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-java_2.11;2.5.3!play-java_2.11.jar (3381ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-netty-server_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-netty-server_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-netty-server_2.11;2.5.3!play-netty-server_2.11.jar (3423ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-logback_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-logback_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-logback_2.11;2.5.3!play-logback_2.11.jar (1333ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-java-jdbc_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-java-jdbc_2.11;2.5.3!play-java-jdbc_2.11.jar (1160ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-cache_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-cache_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-cache_2.11;2.5.3!play-cache_2.11.jar (3576ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-java-ws_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-java-ws_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-java-ws_2.11;2.5.3!play-java-ws_2.11.jar (2772ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play_2.11;2.5.3!play_2.11.jar (98012ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-iteratees_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-iteratees_2.11;2.5.3!play-iteratees_2.11.jar (28770ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-json_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-json_2.11;2.5.3!play-json_2.11.jar (23716ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-netty-utils/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-netty-utils-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-netty-utils;2.5.3!play-netty-utils.jar (1953ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-streams_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-streams_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-streams_2.11;2.5.3!play-streams_2.11.jar (11401ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/<span class="hljs-number">1.7</span>.<span class="hljs-number">16</span>/slf4j-api-<span class="hljs-number">1.7</span>.<span class="hljs-number">16</span>.jar ...
+[info]     [SUCCESSFUL ] org.slf4j<span class="hljs-comment">#slf4j-api;1.7.16!slf4j-api.jar (1937ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/<span class="hljs-number">1.7</span>.<span class="hljs-number">16</span>/jul-to-slf4j-<span class="hljs-number">1.7</span>.<span class="hljs-number">16</span>.jar ...
+[info]     [SUCCESSFUL ] org.slf4j<span class="hljs-comment">#jul-to-slf4j;1.7.16!jul-to-slf4j.jar (939ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/<span class="hljs-number">1.7</span>.<span class="hljs-number">16</span>/jcl-over-slf4j-<span class="hljs-number">1.7</span>.<span class="hljs-number">16</span>.jar ...
+[info]     [SUCCESSFUL ] org.slf4j<span class="hljs-comment">#jcl-over-slf4j;1.7.16!jcl-over-slf4j.jar (1372ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.4</span>.<span class="hljs-number">4</span>/akka-actor_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.4</span>.<span class="hljs-number">4</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.akka<span class="hljs-comment">#akka-actor_2.11;2.4.4!akka-actor_2.11.jar (97072ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.4</span>.<span class="hljs-number">4</span>/akka-slf4j_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.4</span>.<span class="hljs-number">4</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.akka<span class="hljs-comment">#akka-slf4j_2.11;2.4.4!akka-slf4j_2.11.jar (1928ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>/jackson-core-<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.fasterxml.jackson.core<span class="hljs-comment">#jackson-core;2.7.1!jackson-core.jar(bundle) (10738ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>/jackson-annotations-<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.fasterxml.jackson.core<span class="hljs-comment">#jackson-annotations;2.7.1!jackson-annotations.jar(bundle) (3608ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>/jackson-databind-<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.fasterxml.jackson.core<span class="hljs-comment">#jackson-databind;2.7.1!jackson-databind.jar(bundle) (40487ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>/jackson-datatype-jdk8-<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.fasterxml.jackson.datatype<span class="hljs-comment">#jackson-datatype-jdk8;2.7.1!jackson-datatype-jdk8.jar(bundle) (3224ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>/jackson-datatype-jsr310-<span class="hljs-number">2.7</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.fasterxml.jackson.datatype<span class="hljs-comment">#jackson-datatype-jsr310;2.7.1!jackson-datatype-jsr310.jar(bundle) (3993ms)</span>
+[info] downloading https://repo1.maven.org/maven2/commons-codec/commons-codec/<span class="hljs-number">1.10</span>/commons-codec-<span class="hljs-number">1.10</span>.jar ...
+[info]     [SUCCESSFUL ] commons-codec<span class="hljs-comment">#commons-codec;1.10!commons-codec.jar (12596ms)</span>
+[info] downloading https://repo1.maven.org/maven2/joda-time/joda-time/<span class="hljs-number">2.9</span>.<span class="hljs-number">2</span>/joda-time-<span class="hljs-number">2.9</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] joda-time<span class="hljs-comment">#joda-time;2.9.2!joda-time.jar (22216ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/joda/joda-convert/<span class="hljs-number">1.8</span>.<span class="hljs-number">1</span>/joda-convert-<span class="hljs-number">1.8</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] org.joda<span class="hljs-comment">#joda-convert;1.8.1!joda-convert.jar (5458ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/google/inject/guice/<span class="hljs-number">4.0</span>/guice-<span class="hljs-number">4.0</span>.jar ...
+[info]     [SUCCESSFUL ] com.google.inject<span class="hljs-comment">#guice;4.0!guice.jar (22720ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/<span class="hljs-number">4.0</span>/guice-assistedinject-<span class="hljs-number">4.0</span>.jar ...
+[info]     [SUCCESSFUL ] com.google.inject.extensions<span class="hljs-comment">#guice-assistedinject;4.0!guice-assistedinject.jar (3002ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/<span class="hljs-number">2.11</span>.<span class="hljs-number">7</span>/scala-reflect-<span class="hljs-number">2.11</span>.<span class="hljs-number">7</span>.jar ...
+[info]     [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-reflect;2.11.7!scala-reflect.jar (115169ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.7</span>.<span class="hljs-number">0</span>/scala-java8-compat_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.7</span>.<span class="hljs-number">0</span>.jar ...
+[info]     [SUCCESSFUL ] org.scala-lang.modules<span class="hljs-comment">#scala-java8-compat_2.11;0.7.0!scala-java8-compat_2.11.jar(bundle) (15091ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-functional_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-functional_2.11;2.5.3!play-functional_2.11.jar (15865ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-datacommons_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-datacommons_2.11;2.5.3!play-datacommons_2.11.jar (963ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/<span class="hljs-number">1.0</span>.<span class="hljs-number">0</span>/reactive-streams-<span class="hljs-number">1.0</span>.<span class="hljs-number">0</span>.jar ...
+[info]     [SUCCESSFUL ] org.reactivestreams<span class="hljs-comment">#reactive-streams;1.0.0!reactive-streams.jar (973ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.4</span>.<span class="hljs-number">4</span>/akka-stream_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.4</span>.<span class="hljs-number">4</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.akka<span class="hljs-comment">#akka-stream_2.11;2.4.4!akka-stream_2.11.jar (98130ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/ssl-config-akka_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.2</span>.<span class="hljs-number">1</span>/ssl-config-akka_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.2</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe<span class="hljs-comment">#ssl-config-akka_2.11;0.2.1!ssl-config-akka_2.11.jar(bundle) (1784ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.<span class="hljs-number">11</span>/<span class="hljs-number">0.2</span>.<span class="hljs-number">1</span>/ssl-config-core_2.<span class="hljs-number">11</span>-<span class="hljs-number">0.2</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe<span class="hljs-comment">#ssl-config-core_2.11;0.2.1!ssl-config-core_2.11.jar(bundle) (9419ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/yaml/snakeyaml/<span class="hljs-number">1.16</span>/snakeyaml-<span class="hljs-number">1.16</span>.jar ...
+[info]     [SUCCESSFUL ] org.yaml<span class="hljs-comment">#snakeyaml;1.16!snakeyaml.jar(bundle) (6276ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/hibernate/hibernate-validator/<span class="hljs-number">5.2</span>.<span class="hljs-number">4</span>.Final/hibernate-validator-<span class="hljs-number">5.2</span>.<span class="hljs-number">4</span>.Final.jar ...
+[info]     [SUCCESSFUL ] org.hibernate<span class="hljs-comment">#hibernate-validator;5.2.4.Final!hibernate-validator.jar (18193ms)</span>
+[info] downloading https://repo1.maven.org/maven2/javax/el/javax.el-api/<span class="hljs-number">3.0</span>.<span class="hljs-number">0</span>/javax.el-api-<span class="hljs-number">3.0</span>.<span class="hljs-number">0</span>.jar ...
+[info]     [SUCCESSFUL ] javax.el<span class="hljs-comment">#javax.el-api;3.0.0!javax.el-api.jar (2880ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/springframework/spring-context/<span class="hljs-number">4.2</span>.<span class="hljs-number">4</span>.RELEASE/spring-context-<span class="hljs-number">4.2</span>.<span class="hljs-number">4</span>.RELEASE.jar ...
+[info]     [SUCCESSFUL ] org.springframework<span class="hljs-comment">#spring-context;4.2.4.RELEASE!spring-context.jar (29045ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/springframework/spring-core/<span class="hljs-number">4.2</span>.<span class="hljs-number">4</span>.RELEASE/spring-core-<span class="hljs-number">4.2</span>.<span class="hljs-number">4</span>.RELEASE.jar ...
+[info]     [SUCCESSFUL ] org.springframework<span class="hljs-comment">#spring-core;4.2.4.RELEASE!spring-core.jar (38260ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/springframework/spring-beans/<span class="hljs-number">4.2</span>.<span class="hljs-number">4</span>.RELEASE/spring-beans-<span class="hljs-number">4.2</span>.<span class="hljs-number">4</span>.RELEASE.jar ...
+[info]     [SUCCESSFUL ] org.springframework<span class="hljs-comment">#spring-beans;4.2.4.RELEASE!spring-beans.jar (24322ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/reflections/reflections/<span class="hljs-number">0.9</span>.<span class="hljs-number">10</span>/reflections-<span class="hljs-number">0.9</span>.<span class="hljs-number">10</span>.jar ...
+[info]     [SUCCESSFUL ] org.reflections<span class="hljs-comment">#reflections;0.9.10!reflections.jar (4797ms)</span>
+[info] downloading https://repo1.maven.org/maven2/net/jodah/typetools/<span class="hljs-number">0.4</span>.<span class="hljs-number">4</span>/typetools-<span class="hljs-number">0.4</span>.<span class="hljs-number">4</span>.jar ...
+[info]     [SUCCESSFUL ] net.jodah<span class="hljs-comment">#typetools;0.4.4!typetools.jar(bundle) (1549ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/google/guava/guava/<span class="hljs-number">19.0</span>/guava-<span class="hljs-number">19.0</span>.jar ...
+[info]     [SUCCESSFUL ] com.google.guava<span class="hljs-comment">#guava;19.0!guava.jar(bundle) (70129ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/<span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>/jsr305-<span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.google.code.findbugs<span class="hljs-comment">#jsr305;3.0.1!jsr305.jar (1352ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-servlet-api/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/tomcat-servlet-api-<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>.jar ...
+[info]     [SUCCESSFUL ] org.apache.tomcat<span class="hljs-comment">#tomcat-servlet-api;8.0.32!tomcat-servlet-api.jar (9158ms)</span>
+[info] downloading https://repo1.maven.org/maven2/javax/validation/validation-api/<span class="hljs-number">1.1</span>.<span class="hljs-number">0</span>.Final/validation-api-<span class="hljs-number">1.1</span>.<span class="hljs-number">0</span>.Final.jar ...
+[info]     [SUCCESSFUL ] javax.validation<span class="hljs-comment">#validation-api;1.1.0.Final!validation-api.jar (2833ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/<span class="hljs-number">3.2</span>.<span class="hljs-number">1</span>.Final/jboss-logging-<span class="hljs-number">3.2</span>.<span class="hljs-number">1</span>.Final.jar ...
+[info]     [SUCCESSFUL ] org.jboss.logging<span class="hljs-comment">#jboss-logging;3.2.1.Final!jboss-logging.jar (2699ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/classmate/<span class="hljs-number">1.1</span>.<span class="hljs-number">0</span>/classmate-<span class="hljs-number">1.1</span>.<span class="hljs-number">0</span>.jar ...
+[info]     [SUCCESSFUL ] com.fasterxml<span class="hljs-comment">#classmate;1.1.0!classmate.jar(bundle) (3078ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/netty/netty-reactive-streams-http/<span class="hljs-number">1.0</span>.<span class="hljs-number">5</span>/netty-reactive-streams-http-<span class="hljs-number">1.0</span>.<span class="hljs-number">5</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.netty<span class="hljs-comment">#netty-reactive-streams-http;1.0.5!netty-reactive-streams-http.jar (1770ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final/netty-transport-native-epoll-<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final-linux-x86_64.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-transport-native-epoll;4.0.36.Final!netty-transport-native-epoll.jar (8208ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/netty/netty-reactive-streams/<span class="hljs-number">1.0</span>.<span class="hljs-number">5</span>/netty-reactive-streams-<span class="hljs-number">1.0</span>.<span class="hljs-number">5</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.netty<span class="hljs-comment">#netty-reactive-streams;1.0.5!netty-reactive-streams.jar (2589ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/<span class="hljs-number">4.0</span>.<span class="hljs-number">34</span>.Final/netty-codec-http-<span class="hljs-number">4.0</span>.<span class="hljs-number">34</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-codec-http;4.0.34.Final!netty-codec-http.jar (17677ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-handler/<span class="hljs-number">4.0</span>.<span class="hljs-number">34</span>.Final/netty-handler-<span class="hljs-number">4.0</span>.<span class="hljs-number">34</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-handler;4.0.34.Final!netty-handler.jar (11570ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-codec/<span class="hljs-number">4.0</span>.<span class="hljs-number">34</span>.Final/netty-codec-<span class="hljs-number">4.0</span>.<span class="hljs-number">34</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-codec;4.0.34.Final!netty-codec.jar (5291ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-common/<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final/netty-common-<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-common;4.0.36.Final!netty-common.jar (14544ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-buffer/<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final/netty-buffer-<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-buffer;4.0.36.Final!netty-buffer.jar (7153ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-transport/<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final/netty-transport-<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-transport;4.0.36.Final!netty-transport.jar (12618ms)</span>
+[info] downloading https://repo1.maven.org/maven2/ch/qos/logback/logback-core/<span class="hljs-number">1.1</span>.<span class="hljs-number">4</span>/logback-core-<span class="hljs-number">1.1</span>.<span class="hljs-number">4</span>.jar ...
+[info]     [SUCCESSFUL ] ch.qos.logback<span class="hljs-comment">#logback-core;1.1.4!logback-core.jar (13493ms)</span>
+[info] downloading https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/<span class="hljs-number">1.1</span>.<span class="hljs-number">4</span>/logback-classic-<span class="hljs-number">1.1</span>.<span class="hljs-number">4</span>.jar ...
+[info]     [SUCCESSFUL ] ch.qos.logback<span class="hljs-comment">#logback-classic;1.1.4!logback-classic.jar (6327ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-jdbc_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-jdbc_2.11;2.5.3!play-jdbc_2.11.jar (4199ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-jdbc-api_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-jdbc-api_2.11;2.5.3!play-jdbc-api_2.11.jar (1589ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/jolbox/bonecp/<span class="hljs-number">0.8</span>.<span class="hljs-number">0</span>.RELEASE/bonecp-<span class="hljs-number">0.8</span>.<span class="hljs-number">0</span>.RELEASE.jar ...
+[info]     [SUCCESSFUL ] com.jolbox<span class="hljs-comment">#bonecp;0.8.0.RELEASE!bonecp.jar(bundle) (3990ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/zaxxer/HikariCP/<span class="hljs-number">2.4</span>.<span class="hljs-number">3</span>/HikariCP-<span class="hljs-number">2.4</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.zaxxer<span class="hljs-comment">#HikariCP;2.4.3!HikariCP.jar(bundle) (3476ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/googlecode/usc/jdbcdslog/<span class="hljs-number">1.0</span>.<span class="hljs-number">6.2</span>/jdbcdslog-<span class="hljs-number">1.0</span>.<span class="hljs-number">6.2</span>.jar ...
+[info]     [SUCCESSFUL ] com.googlecode.usc<span class="hljs-comment">#jdbcdslog;1.0.6.2!jdbcdslog.jar (2153ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/h2database/h2/<span class="hljs-number">1.4</span>.<span class="hljs-number">191</span>/h2-<span class="hljs-number">1.4</span>.<span class="hljs-number">191</span>.jar ...
+[info]     [SUCCESSFUL ] com.h2database<span class="hljs-comment">#h2;1.4.191!h2.jar (57990ms)</span>
+[info] downloading https://repo1.maven.org/maven2/tyrex/tyrex/<span class="hljs-number">1.0</span>.<span class="hljs-number">1</span>/tyrex-<span class="hljs-number">1.0</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] tyrex<span class="hljs-comment">#tyrex;1.0.1!tyrex.jar (7162ms)</span>
+[info] downloading https://repo1.maven.org/maven2/net/sf/ehcache/ehcache-core/<span class="hljs-number">2.6</span>.<span class="hljs-number">11</span>/ehcache-core-<span class="hljs-number">2.6</span>.<span class="hljs-number">11</span>.jar ...
+[info]     [SUCCESSFUL ] net.sf.ehcache<span class="hljs-comment">#ehcache-core;2.6.11!ehcache-core.jar (41619ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-ws_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-ws_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-ws_2.11;2.5.3!play-ws_2.11.jar (24827ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client/<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>/async-http-client-<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.asynchttpclient<span class="hljs-comment">#async-http-client;2.0.2!async-http-client.jar (11678ms)</span>
+[info] downloading https://repo1.maven.org/maven2/oauth/signpost/signpost-core/<span class="hljs-number">1.2</span>.<span class="hljs-number">1.2</span>/signpost-core-<span class="hljs-number">1.2</span>.<span class="hljs-number">1.2</span>-tests.jar ...
+[info]     [SUCCESSFUL ] oauth.signpost<span class="hljs-comment">#signpost-core;1.2.1.2!signpost-core.jar(test-jar) (2372ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final/netty-codec-http-<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-codec-http;4.0.36.Final!netty-codec-http.jar (14780ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver-dns/<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>/netty-resolver-dns-<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.asynchttpclient<span class="hljs-comment">#netty-resolver-dns;2.0.2!netty-resolver-dns.jar (4154ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/javassist/javassist/<span class="hljs-number">3.20</span>.<span class="hljs-number">0</span>-GA/javassist-<span class="hljs-number">3.20</span>.<span class="hljs-number">0</span>-GA.jar ...
+[info]     [SUCCESSFUL ] org.javassist<span class="hljs-comment">#javassist;3.20.0-GA!javassist.jar(bundle) (25566ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/<span class="hljs-number">1.7</span>.<span class="hljs-number">21</span>/slf4j-api-<span class="hljs-number">1.7</span>.<span class="hljs-number">21</span>.jar ...
+[info]     [SUCCESSFUL ] org.slf4j<span class="hljs-comment">#slf4j-api;1.7.21!slf4j-api.jar (1748ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-codec/<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final/netty-codec-<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-codec;4.0.36.Final!netty-codec.jar (5753ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty-handler/<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final/netty-handler-<span class="hljs-number">4.0</span>.<span class="hljs-number">36</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty-handler;4.0.36.Final!netty-handler.jar (5658ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver/<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>/netty-resolver-<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.asynchttpclient<span class="hljs-comment">#netty-resolver;2.0.2!netty-resolver.jar (1157ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/asynchttpclient/netty-codec-dns/<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>/netty-codec-dns-<span class="hljs-number">2.0</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.asynchttpclient<span class="hljs-comment">#netty-codec-dns;2.0.2!netty-codec-dns.jar (1523ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/<span class="hljs-number">4.0</span>.<span class="hljs-number">1</span>/httpcore-<span class="hljs-number">4.0</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] org.apache.httpcomponents<span class="hljs-comment">#httpcore;4.0.1!httpcore.jar (4600ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/<span class="hljs-number">4.0</span>.<span class="hljs-number">1</span>/httpclient-<span class="hljs-number">4.0</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] org.apache.httpcomponents<span class="hljs-comment">#httpclient;4.0.1!httpclient.jar (5554ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-test_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-test_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-test_2.11;2.5.3!play-test_2.11.jar (4943ms)</span>
+[info] downloading https://repo1.maven.org/maven2/junit/junit/<span class="hljs-number">4.12</span>/junit-<span class="hljs-number">4.12</span>.jar ...
+[info]     [SUCCESSFUL ] junit<span class="hljs-comment">#junit;4.12!junit.jar (16508ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/novocode/junit-interface/<span class="hljs-number">0.11</span>/junit-interface-<span class="hljs-number">0.11</span>.jar ...
+[info]     [SUCCESSFUL ] com.novocode<span class="hljs-comment">#junit-interface;0.11!junit-interface.jar (1733ms)</span>
+[info] downloading https://repo1.maven.org/maven2/net/sourceforge/htmlunit/htmlunit/<span class="hljs-number">2.20</span>/htmlunit-<span class="hljs-number">2.20</span>.jar ...
+[info]     [SUCCESSFUL ] net.sourceforge.htmlunit<span class="hljs-comment">#htmlunit;2.20!htmlunit.jar (45915ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/fluentlenium/fluentlenium-core/<span class="hljs-number">0.10</span>.<span class="hljs-number">9</span>/fluentlenium-core-<span class="hljs-number">0.10</span>.<span class="hljs-number">9</span>.jar ...
+[info]     [SUCCESSFUL ] org.fluentlenium<span class="hljs-comment">#fluentlenium-core;0.10.9!fluentlenium-core.jar (2941ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/<span class="hljs-number">1.3</span>/hamcrest-core-<span class="hljs-number">1.3</span>.jar ...
+[info]     [SUCCESSFUL ] org.hamcrest<span class="hljs-comment">#hamcrest-core;1.3!hamcrest-core.jar (1717ms)</span>
+[info] downloading https://repo1.maven.org/maven2/xalan/xalan/<span class="hljs-number">2.7</span>.<span class="hljs-number">2</span>/xalan-<span class="hljs-number">2.7</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] xalan<span class="hljs-comment">#xalan;2.7.2!xalan.jar (56435ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/<span class="hljs-number">4.5</span>.<span class="hljs-number">2</span>/httpclient-<span class="hljs-number">4.5</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.apache.httpcomponents<span class="hljs-comment">#httpclient;4.5.2!httpclient.jar (13353ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpmime/<span class="hljs-number">4.5</span>.<span class="hljs-number">2</span>/httpmime-<span class="hljs-number">4.5</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.apache.httpcomponents<span class="hljs-comment">#httpmime;4.5.2!httpmime.jar (1480ms)</span>
+[info] downloading https://repo1.maven.org/maven2/net/sourceforge/htmlunit/htmlunit-core-js/<span class="hljs-number">2.17</span>/htmlunit-core-js-<span class="hljs-number">2.17</span>.jar ...
+[info]     [SUCCESSFUL ] net.sourceforge.htmlunit<span class="hljs-comment">#htmlunit-core-js;2.17!htmlunit-core-js.jar (30073ms)</span>
+[info] downloading https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/<span class="hljs-number">1.9</span>.<span class="hljs-number">22</span>/nekohtml-<span class="hljs-number">1.9</span>.<span class="hljs-number">22</span>.jar ...
+[info]     [SUCCESSFUL ] net.sourceforge.nekohtml<span class="hljs-comment">#nekohtml;1.9.22!nekohtml.jar (3958ms)</span>
+[info] downloading https://repo1.maven.org/maven2/net/sourceforge/cssparser/cssparser/<span class="hljs-number">0.9</span>.<span class="hljs-number">18</span>/cssparser-<span class="hljs-number">0.9</span>.<span class="hljs-number">18</span>.jar ...
+[info]     [SUCCESSFUL ] net.sourceforge.cssparser<span class="hljs-comment">#cssparser;0.9.18!cssparser.jar (5654ms)</span>
+[info] downloading https://repo1.maven.org/maven2/commons-logging/commons-logging/<span class="hljs-number">1.2</span>/commons-logging-<span class="hljs-number">1.2</span>.jar ...
+[info]     [SUCCESSFUL ] commons-logging<span class="hljs-comment">#commons-logging;1.2!commons-logging.jar (2129ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/eclipse/jetty/websocket/websocket-client/<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210/websocket-client-<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210.jar ...
+[info]     [SUCCESSFUL ] org.eclipse.jetty.websocket<span class="hljs-comment">#websocket-client;9.2.15.v20160210!websocket-client.jar (1559ms)</span>
+[info] downloading https://repo1.maven.org/maven2/xalan/serializer/<span class="hljs-number">2.7</span>.<span class="hljs-number">2</span>/serializer-<span class="hljs-number">2.7</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] xalan<span class="hljs-comment">#serializer;2.7.2!serializer.jar (6881ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/<span class="hljs-number">4.4</span>.<span class="hljs-number">4</span>/httpcore-<span class="hljs-number">4.4</span>.<span class="hljs-number">4</span>.jar ...
+[info]     [SUCCESSFUL ] org.apache.httpcomponents<span class="hljs-comment">#httpcore;4.4.4!httpcore.jar (11247ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/w3c/css/sac/<span class="hljs-number">1.3</span>/sac-<span class="hljs-number">1.3</span>.jar ...
+[info]     [SUCCESSFUL ] org.w3c.css<span class="hljs-comment">#sac;1.3!sac.jar (1732ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210/jetty-util-<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210.jar ...
+[info]     [SUCCESSFUL ] org.eclipse.jetty<span class="hljs-comment">#jetty-util;9.2.15.v20160210!jetty-util.jar (9185ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-io/<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210/jetty-io-<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210.jar ...
+[info]     [SUCCESSFUL ] org.eclipse.jetty<span class="hljs-comment">#jetty-io;9.2.15.v20160210!jetty-io.jar (3044ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/eclipse/jetty/websocket/websocket-common/<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210/websocket-common-<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210.jar ...
+[info]     [SUCCESSFUL ] org.eclipse.jetty.websocket<span class="hljs-comment">#websocket-common;9.2.15.v20160210!websocket-common.jar (4225ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/eclipse/jetty/websocket/websocket-api/<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210/websocket-api-<span class="hljs-number">9.2</span>.<span class="hljs-number">15</span>.v20160210.jar ...
+[info]     [SUCCESSFUL ] org.eclipse.jetty.websocket<span class="hljs-comment">#websocket-api;9.2.15.v20160210!websocket-api.jar (1705ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-java/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-java-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-java;2.48.2!selenium-java.jar (954ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-chrome-driver-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-chrome-driver;2.48.2!selenium-chrome-driver.jar (1133ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-edge-driver/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-edge-driver-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-edge-driver;2.48.2!selenium-edge-driver.jar (936ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-htmlunit-driver/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-htmlunit-driver-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-htmlunit-driver;2.48.2!selenium-htmlunit-driver.jar (1682ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-firefox-driver/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-firefox-driver-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-firefox-driver;2.48.2!selenium-firefox-driver.jar (20828ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-ie-driver/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-ie-driver-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-ie-driver;2.48.2!selenium-ie-driver.jar (1081ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-safari-driver/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-safari-driver-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-safari-driver;2.48.2!selenium-safari-driver.jar (2341ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-support/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-support-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-support;2.48.2!selenium-support.jar (4269ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/webbitserver/webbit/<span class="hljs-number">0.4</span>.<span class="hljs-number">14</span>/webbit-<span class="hljs-number">0.4</span>.<span class="hljs-number">14</span>.jar ...
+[info]     [SUCCESSFUL ] org.webbitserver<span class="hljs-comment">#webbit;0.4.14!webbit.jar (4866ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-leg-rc/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-leg-rc-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-leg-rc;2.48.2!selenium-leg-rc.jar (7531ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-remote-driver-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-remote-driver;2.48.2!selenium-remote-driver.jar (4003ms)</span>
+[info] downloading https://repo1.maven.org/maven2/cglib/cglib-nodep/<span class="hljs-number">2.1</span>_3/cglib-nodep-<span class="hljs-number">2.1</span>_3.jar ...
+[info]     [SUCCESSFUL ] cglib<span class="hljs-comment">#cglib-nodep;2.1_3!cglib-nodep.jar (5415ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/google/code/gson/gson/<span class="hljs-number">2.3</span>.<span class="hljs-number">1</span>/gson-<span class="hljs-number">2.3</span>.<span class="hljs-number">1</span>.jar ...
+[info]     [SUCCESSFUL ] com.google.code.gson<span class="hljs-comment">#gson;2.3.1!gson.jar (4520ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-api/<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>/selenium-api-<span class="hljs-number">2.48</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] org.seleniumhq.selenium<span class="hljs-comment">#selenium-api;2.48.2!selenium-api.jar (3309ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/apache/commons/commons-exec/<span class="hljs-number">1.3</span>/commons-exec-<span class="hljs-number">1.3</span>.jar ...
+[info]     [SUCCESSFUL ] org.apache.commons<span class="hljs-comment">#commons-exec;1.3!commons-exec.jar (2440ms)</span>
+[info] downloading https://repo1.maven.org/maven2/net/java/dev/jna/jna-platform/<span class="hljs-number">4.1</span>.<span class="hljs-number">0</span>/jna-platform-<span class="hljs-number">4.1</span>.<span class="hljs-number">0</span>.jar ...
+[info]     [SUCCESSFUL ] net.java.dev.jna<span class="hljs-comment">#jna-platform;4.1.0!jna-platform.jar (25282ms)</span>
+[info] downloading https://repo1.maven.org/maven2/io/netty/netty/<span class="hljs-number">3.5</span>.<span class="hljs-number">2</span>.Final/netty-<span class="hljs-number">3.5</span>.<span class="hljs-number">2</span>.Final.jar ...
+[info]     [SUCCESSFUL ] io.netty<span class="hljs-comment">#netty;3.5.2.Final!netty.jar(bundle) (24645ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-omnidoc_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-omnidoc_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-omnidoc_2.11;2.5.3!play-omnidoc_2.11.jar (224793ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-docs_2.<span class="hljs-number">11</span>/<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>/play-docs_2.<span class="hljs-number">11</span>-<span class="hljs-number">2.5</span>.<span class="hljs-number">3</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-docs_2.11;2.5.3!play-docs_2.11.jar (223092ms)</span>
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-doc_2.<span class="hljs-number">11</span>/<span class="hljs-number">1.2</span>.<span class="hljs-number">2</span>/play-doc_2.<span class="hljs-number">11</span>-<span class="hljs-number">1.2</span>.<span class="hljs-number">2</span>.jar ...
+[info]     [SUCCESSFUL ] com.typesafe.play<span class="hljs-comment">#play-doc_2.11;1.2.2!play-doc_2.11.jar (4763ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/pegdown/pegdown/<span class="hljs-number">1.4</span>.<span class="hljs-number">0</span>/pegdown-<span class="hljs-number">1.4</span>.<span class="hljs-number">0</span>.jar ...
+[info]     [SUCCESSFUL ] org.pegdown<span class="hljs-comment">#pegdown;1.4.0!pegdown.jar (3104ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/parboiled/parboiled-java/<span class="hljs-number">1.1</span>.<span class="hljs-number">5</span>/parboiled-java-<span class="hljs-number">1.1</span>.<span class="hljs-number">5</span>.jar ...
+[info]     [SUCCESSFUL ] org.parboiled<span class="hljs-comment">#parboiled-java;1.1.5!parboiled-java.jar(bundle) (2455ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/parboiled/parboiled-core/<span class="hljs-number">1.1</span>.<span class="hljs-number">5</span>/parboiled-core-<span class="hljs-number">1.1</span>.<span class="hljs-number">5</span>.jar ...
+[info]     [SUCCESSFUL ] org.parboiled<span class="hljs-comment">#parboiled-core;1.1.5!parboiled-core.jar(bundle) (4276ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/ow2/asm/asm/<span class="hljs-number">4.1</span>/asm-<span class="hljs-number">4.1</span>.jar ...
+[info]     [SUCCESSFUL ] org.ow2.asm<span class="hljs-comment">#asm;4.1!asm.jar (1910ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/<span class="hljs-number">4.1</span>/asm-tree-<span class="hljs-number">4.1</span>.jar ...
+[info]     [SUCCESSFUL ] org.ow2.asm<span class="hljs-comment">#asm-tree;4.1!asm-tree.jar (1934ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/ow2/asm/asm-analysis/<span class="hljs-number">4.1</span>/asm-analysis-<span class="hljs-number">4.1</span>.jar ...
+[info]     [SUCCESSFUL ] org.ow2.asm<span class="hljs-comment">#asm-analysis;4.1!asm-analysis.jar (1144ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/ow2/asm/asm-util/<span class="hljs-number">4.1</span>/asm-util-<span class="hljs-number">4.1</span>.jar ...
+[info]     [SUCCESSFUL ] org.ow2.asm<span class="hljs-comment">#asm-util;4.1!asm-util.jar (1718ms)</span>
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/<span class="hljs-number">2.11</span>.<span class="hljs-number">7</span>/scala-compiler-<span class="hljs-number">2.11</span>.<span class="hljs-number">7</span>.jar ...
+[info]     [SUCCESSFUL ] org.scala-lang<span class="hljs-comment">#scala-compiler;2.11.7!scala-compiler.jar (346534ms)</span>
+[info] Done updating.
+
+--- (Running the application, auto-reloading is enabled) ---
+
+[info] p.c.s.NettyServer - Listening <span class="hljs-keyword">for</span> HTTP on /<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">9000</span>
+
+(Server started, use Ctrl+D to stop and go back to the console...)
+</code></pre>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;<code>localhost:9000</code>&#x53EF;&#x4EE5;&#x770B;&#x5230;play&#x7684;&#x6B22;&#x8FCE;&#x9875;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../2016/05/find_centos_version.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 查看centos版本"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

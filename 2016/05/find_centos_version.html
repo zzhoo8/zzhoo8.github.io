@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>mac下安装tomcat8 | zzhoo8的个人博客</title>
+        <title>查看centos版本 | zzhoo8的个人博客</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../2016/03/install_jetty.html" />
+    <link rel="next" href="../../2016/05/install_playframework_on_mac.html" />
     
     
-    <link rel="prev" href="../../2016/02/how_to_get_born_certification.html" />
+    <link rel="prev" href="../../2016/05/update_nodejs.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="5"
-        data-chapter-title="mac下安装tomcat8"
-        data-filepath="2016/03/install_tomcat8.md"
+        data-level="12"
+        data-chapter-title="查看centos版本"
+        data-filepath="2016/05/find_centos_version.md"
         data-basepath="../.."
         data-revision="Tue May 24 2016 23:26:22 GMT+0800 (HKT)"
         data-innerlanguage="">
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5" data-path="2016/03/install_tomcat8.html">
+        <li class="chapter " data-level="5" data-path="2016/03/install_tomcat8.html">
             
                 
                     <a href="../../2016/03/install_tomcat8.html">
@@ -247,7 +247,7 @@
             
         </li>
     
-        <li class="chapter " data-level="12" data-path="2016/05/find_centos_version.html">
+        <li class="chapter active" data-level="12" data-path="2016/05/find_centos_version.html">
             
                 
                     <a href="../../2016/05/find_centos_version.html">
@@ -310,23 +310,22 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="mac&#x4E0B;&#x5B89;&#x88C5;tomcat8">Mac&#x4E0B;&#x5B89;&#x88C5;tomcat8</h1>
-<pre><code class="lang-bash">&#x279C;  ~ brew install tomcat
-==&gt; Downloading https://www.apache.org/dyn/closer.cgi?path=tomcat/tomcat-<span class="hljs-number">8</span>/v8.<span class="hljs-number">0.32</span>/bin/apache-tomcat-<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>.tar.gz
-==&gt; Best Mirror http://mirrors.cnnic.cn/apache/tomcat/tomcat-<span class="hljs-number">8</span>/v8.<span class="hljs-number">0.32</span>/bin/apache-tomcat-<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>.tar.gz
-<span class="hljs-comment">######################################################################## 100.0%</span>
-&#x1F37A;  /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>: <span class="hljs-number">634</span> files, <span class="hljs-number">12.4</span>M, built <span class="hljs-keyword">in</span> <span class="hljs-number">21</span> seconds
+                        <h1 id="&#x67E5;&#x627E;centos&#x7248;&#x672C;&#x53F7;">&#x67E5;&#x627E;centos&#x7248;&#x672C;&#x53F7;</h1>
+<p>case&#x7684;&#x60C5;&#x51B5;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x672C;&#x673A;&#x7684;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x4F7F;&#x7528;&#x7684;&#x662F;centos&#x7684;docker&#x955C;&#x50CF;&#xFF0C;&#x60F3;&#x8981;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#x4E00;&#x4EFD;Gitlab&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x9009;&#x53D6;&#x4EC0;&#x4E48;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0B;&#x7684;&#x5B89;&#x88C5;&#x624B;&#x518C;...</p>
+<pre><code class="lang-bash">[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># cat /proc/version </span>
+Linux version <span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker (root@e615e9fecf7f) (gcc version <span class="hljs-number">4.9</span>.<span class="hljs-number">2</span> (Debian <span class="hljs-number">4.9</span>.<span class="hljs-number">2</span>-<span class="hljs-number">10</span>) ) <span class="hljs-comment">#1 SMP Tue Oct 27 16:34:33 UTC 2015</span>
+[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># uname -a</span>
+Linux <span class="hljs-number">1</span>e5f9bfda01d <span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker <span class="hljs-comment">#1 SMP Tue Oct 27 16:34:33 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux</span>
+[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># uname -r</span>
+<span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker
+[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># cat /etc/issue</span>
+\S
+Kernel \r on an \m
 </code></pre>
-<pre><code class="lang-bash">&#x279C;  ~ <span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/bin
-&#x279C;  bin git:(master) ./startup.sh 
-Using CATALINA_BASE:   /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec
-Using CATALINA_HOME:   /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec
-Using CATALINA_TMPDIR: /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/temp
-Using JRE_HOME:        /Library/Java/JavaVirtualMachines/jdk1.<span class="hljs-number">7.0</span>_75.jdk/Contents/Home
-Using CLASSPATH:       /usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/bin/bootstrap.jar:/usr/<span class="hljs-built_in">local</span>/Cellar/tomcat/<span class="hljs-number">8.0</span>.<span class="hljs-number">32</span>/libexec/bin/tomcat-juli.jar
-Tomcat started.
+<p>&#x53EA;&#x6709;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;work</p>
+<pre><code class="lang-bash">[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment">#cat /etc/redhat-release </span>
+CentOS Linux release <span class="hljs-number">7.2</span>.<span class="hljs-number">1511</span> (Core)
 </code></pre>
-<p>&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;<code>http://localhost:8080/</code></p>
 
                     
                     </section>
@@ -337,10 +336,10 @@ Tomcat started.
         </div>
 
         
-        <a href="../../2016/02/how_to_get_born_certification.html" class="navigation navigation-prev " aria-label="Previous page: 如何使用深圳的生育险"><i class="fa fa-angle-left"></i></a>
+        <a href="../../2016/05/update_nodejs.html" class="navigation navigation-prev " aria-label="Previous page: 升级nodejs"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../2016/03/install_jetty.html" class="navigation navigation-next " aria-label="Next page: mac下安装jetty"><i class="fa fa-angle-right"></i></a>
+        <a href="../../2016/05/install_playframework_on_mac.html" class="navigation navigation-next " aria-label="Next page: mac下安装play!框架运行环境"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
