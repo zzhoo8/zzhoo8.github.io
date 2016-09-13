@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>查看Centos版本 | zzhoo8的个人博客</title>
+        <title>使用Jumpserver连接AWS的EC2 | zzhoo8的个人博客</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../../2016/05/install_playframework_on_mac.html" />
     
-    
-    <link rel="prev" href="../../2016/05/update_nodejs.html" />
+    <link rel="prev" href="../../2016/05/introduction_to_markdown.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="12"
-        data-chapter-title="查看Centos版本"
-        data-filepath="2016/05/find_centos_version.md"
+        data-level="15"
+        data-chapter-title="使用Jumpserver连接AWS的EC2"
+        data-filepath="2016/09/jumpserver_aws_ec2.md"
         data-basepath="../.."
         data-revision="Tue Sep 13 2016 12:59:51 GMT+0800 (HKT)"
         data-innerlanguage="">
@@ -247,7 +245,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="12" data-path="2016/05/find_centos_version.html">
+        <li class="chapter " data-level="12" data-path="2016/05/find_centos_version.html">
             
                 
                     <a href="../../2016/05/find_centos_version.html">
@@ -292,7 +290,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15" data-path="2016/09/jumpserver_aws_ec2.html">
+        <li class="chapter active" data-level="15" data-path="2016/09/jumpserver_aws_ec2.html">
             
                 
                     <a href="../../2016/09/jumpserver_aws_ec2.html">
@@ -340,22 +338,32 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x67E5;&#x627E;centos&#x7248;&#x672C;&#x53F7;">&#x67E5;&#x627E;centos&#x7248;&#x672C;&#x53F7;</h1>
-<p>case&#x7684;&#x60C5;&#x51B5;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x672C;&#x673A;&#x7684;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x4F7F;&#x7528;&#x7684;&#x662F;centos&#x7684;docker&#x955C;&#x50CF;&#xFF0C;&#x60F3;&#x8981;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#x4E00;&#x4EFD;Gitlab&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x9009;&#x53D6;&#x4EC0;&#x4E48;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0B;&#x7684;&#x5B89;&#x88C5;&#x624B;&#x518C;...</p>
-<pre><code class="lang-bash">[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># cat /proc/version </span>
-Linux version <span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker (root@e615e9fecf7f) (gcc version <span class="hljs-number">4.9</span>.<span class="hljs-number">2</span> (Debian <span class="hljs-number">4.9</span>.<span class="hljs-number">2</span>-<span class="hljs-number">10</span>) ) <span class="hljs-comment">#1 SMP Tue Oct 27 16:34:33 UTC 2015</span>
-[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># uname -a</span>
-Linux <span class="hljs-number">1</span>e5f9bfda01d <span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker <span class="hljs-comment">#1 SMP Tue Oct 27 16:34:33 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux</span>
-[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># uname -r</span>
-<span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker
-[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># cat /etc/issue</span>
-\S
-Kernel \r on an \m
+                        <h1 id="&#x4F7F;&#x7528;jumpserver&#x8FDE;&#x63A5;aws&#x7684;ec2">&#x4F7F;&#x7528;Jumpserver&#x8FDE;&#x63A5;AWS&#x7684;EC2</h1>
+<p>&gt;</p>
+<p>&#x901A;&#x8FC7;AWS&#x9ED8;&#x8BA4;&#x7684;&#x767B;&#x9646;&#x65B9;&#x5F0F;&#x767B;&#x9646;ec2</p>
+<p><code>ssh -i &quot;iplay_seoul.pem&quot; ec2-user@ec2-52-78-103-20.ap-northeast-2.compute.amazonaws.com</code></p>
+<p>&#x4F7F;&#x7528;<code>sudo -s</code>&#x5347;&#x6743;&#x5230;root</p>
+<p>&#x8BBE;&#x7F6E;root&#x8D26;&#x53F7;&#x7684;&#x5BC6;&#x7801;</p>
+<pre><code class="lang-bash">[root@ip-<span class="hljs-number">172</span>-<span class="hljs-number">31</span>-<span class="hljs-number">1</span>-<span class="hljs-number">82</span> ec2-user]<span class="hljs-comment"># passwd root</span>
+&#x66F4;&#x6539;&#x7528;&#x6237; root &#x7684;&#x5BC6;&#x7801; &#x3002;
+&#x65B0;&#x7684; &#x5BC6;&#x7801;&#xFF1A;
+&#x91CD;&#x65B0;&#x8F93;&#x5165;&#x65B0;&#x7684; &#x5BC6;&#x7801;&#xFF1A;
+passwd&#xFF1A;&#x6240;&#x6709;&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x4EE4;&#x724C;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x66F4;&#x65B0;&#x3002;
 </code></pre>
-<p>&#x53EA;&#x6709;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;work</p>
-<pre><code class="lang-bash">[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment">#cat /etc/redhat-release </span>
-CentOS Linux release <span class="hljs-number">7.2</span>.<span class="hljs-number">1511</span> (Core)
+<p>&#x4FEE;&#x6539;<code>sshd_config</code>&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;root&#x8D26;&#x53F7;&#x901A;&#x8FC7;&#x5BC6;&#x7801;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;</p>
+<blockquote>
+<p>PasswordAuthentication no&#xFF0C;&#x628A;no&#x6539;&#x6210;yes
+PermitRootLogin yes</p>
+</blockquote>
+<pre><code class="lang-bash">[root@ip-<span class="hljs-number">172</span>-<span class="hljs-number">31</span>-<span class="hljs-number">1</span>-<span class="hljs-number">82</span> ec2-user]<span class="hljs-comment"># vi /etc/ssh/sshd_config</span>
+
+[root@ip-<span class="hljs-number">172</span>-<span class="hljs-number">31</span>-<span class="hljs-number">1</span>-<span class="hljs-number">82</span> ec2-user]<span class="hljs-comment"># systemctl restart sshd</span>
 </code></pre>
+<p>&#x4F7F;&#x7528;&#x521A;&#x624D;&#x8BBE;&#x7F6E;&#x7684;root&#x8D26;&#x53F7;&#x548C;&#x5BC6;&#x7801;&#x4ECE;jumpserver&#x8FDE;&#x63A5;&#x5427;</p>
+<h2 id="&#x8D44;&#x6599;">&#x8D44;&#x6599;</h2>
+<ul>
+<li><a href="http://www.luanzun.com/126.shtml" target="_blank">&#x5728;aws ec2&#x4E0A;&#x4F7F;&#x7528;root&#x7528;&#x6237;&#x767B;&#x5F55;</a></li>
+</ul>
 
                     
                     </section>
@@ -366,10 +374,8 @@ CentOS Linux release <span class="hljs-number">7.2</span>.<span class="hljs-numb
         </div>
 
         
-        <a href="../../2016/05/update_nodejs.html" class="navigation navigation-prev " aria-label="Previous page: 升级nodejs"><i class="fa fa-angle-left"></i></a>
+        <a href="../../2016/05/introduction_to_markdown.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Markdown简介"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../../2016/05/install_playframework_on_mac.html" class="navigation navigation-next " aria-label="Next page: mac下安装play!框架运行环境"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
