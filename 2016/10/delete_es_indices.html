@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>查看Centos版本 | zzhoo8的个人博客</title>
+        <title>Graylog收集日志导致磁盘满处理方法 | zzhoo8的个人博客</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../../2016/05/install_playframework_on_mac.html" />
     
-    
-    <link rel="prev" href="../../2016/05/update_nodejs.html" />
+    <link rel="prev" href="../../2016/09/jumpserver_aws_ec2.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="12"
-        data-chapter-title="查看Centos版本"
-        data-filepath="2016/05/find_centos_version.md"
+        data-level="16"
+        data-chapter-title="Graylog收集日志导致磁盘满处理方法"
+        data-filepath="2016/10/delete_es_indices.md"
         data-basepath="../.."
         data-revision="Sat Oct 01 2016 22:33:46 GMT+0800 (HKT)"
         data-innerlanguage="">
@@ -247,7 +245,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="12" data-path="2016/05/find_centos_version.html">
+        <li class="chapter " data-level="12" data-path="2016/05/find_centos_version.html">
             
                 
                     <a href="../../2016/05/find_centos_version.html">
@@ -307,7 +305,7 @@
             
         </li>
     
-        <li class="chapter " data-level="16" data-path="2016/10/delete_es_indices.html">
+        <li class="chapter active" data-level="16" data-path="2016/10/delete_es_indices.html">
             
                 
                     <a href="../../2016/10/delete_es_indices.html">
@@ -355,21 +353,60 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x67E5;&#x627E;centos&#x7248;&#x672C;&#x53F7;">&#x67E5;&#x627E;centos&#x7248;&#x672C;&#x53F7;</h1>
-<p>case&#x7684;&#x60C5;&#x51B5;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x672C;&#x673A;&#x7684;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x4F7F;&#x7528;&#x7684;&#x662F;centos&#x7684;docker&#x955C;&#x50CF;&#xFF0C;&#x60F3;&#x8981;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#x4E00;&#x4EFD;Gitlab&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x9009;&#x53D6;&#x4EC0;&#x4E48;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0B;&#x7684;&#x5B89;&#x88C5;&#x624B;&#x518C;...</p>
-<pre><code class="lang-bash">[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># cat /proc/version </span>
-Linux version <span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker (root@e615e9fecf7f) (gcc version <span class="hljs-number">4.9</span>.<span class="hljs-number">2</span> (Debian <span class="hljs-number">4.9</span>.<span class="hljs-number">2</span>-<span class="hljs-number">10</span>) ) <span class="hljs-comment">#1 SMP Tue Oct 27 16:34:33 UTC 2015</span>
-[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># uname -a</span>
-Linux <span class="hljs-number">1</span>e5f9bfda01d <span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker <span class="hljs-comment">#1 SMP Tue Oct 27 16:34:33 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux</span>
-[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># uname -r</span>
-<span class="hljs-number">4.1</span>.<span class="hljs-number">12</span>-boot2docker
-[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment"># cat /etc/issue</span>
-\S
-Kernel \r on an \m
+                        <h1 id="&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x6EE1;&#x5BFC;&#x81F4;graylog&#x63A5;&#x6536;&#x65E5;&#x5FD7;&#x5931;&#x8D25;">&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x6EE1;&#x5BFC;&#x81F4;graylog&#x63A5;&#x6536;&#x65E5;&#x5FD7;&#x5931;&#x8D25;</h1>
+<h2 id="graylog&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x63A5;&#x6536;&#x65E5;&#x5FD7;">Graylog&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x63A5;&#x6536;&#x65E5;&#x5FD7;</h2>
+<h2 id="&#x78C1;&#x76D8;&#x539F;&#x56E0;">&#x78C1;&#x76D8;&#x539F;&#x56E0;</h2>
+<p>&#x4E00;&#x5171;100G&#x7684;&#x78C1;&#x76D8;&#xFF0C;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x4E86;95G&#x4E86;</p>
+<pre><code class="lang-bash">root@<span class="hljs-number">9</span>f0273e5be42:/usr/share/elasticsearch<span class="hljs-comment"># curl -v http://localhost:9200/_cat/indices</span>
+* Hostname was NOT found <span class="hljs-keyword">in</span> DNS cache
+*   Trying ::<span class="hljs-number">1</span>...
+* Connected to localhost (::<span class="hljs-number">1</span>) port <span class="hljs-number">9200</span> (<span class="hljs-comment">#0)</span>
+&gt; GET /_cat/indices HTTP/<span class="hljs-number">1.1</span>
+&gt; User-Agent: curl/<span class="hljs-number">7.38</span>.<span class="hljs-number">0</span>
+&gt; Host: localhost:<span class="hljs-number">9200</span>
+&gt; Accept: */*
+&gt;
+&lt; HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK
+&lt; Content-Type: text/plain; charset=UTF-<span class="hljs-number">8</span>
+&lt; Content-Length: <span class="hljs-number">255</span>
+&lt;
+green open graylog_1 <span class="hljs-number">4</span> <span class="hljs-number">0</span> <span class="hljs-number">20009148</span> <span class="hljs-number">0</span> <span class="hljs-number">16.4</span>gb <span class="hljs-number">16.4</span>gb
+green open graylog_0 <span class="hljs-number">4</span> <span class="hljs-number">0</span> <span class="hljs-number">20003396</span> <span class="hljs-number">0</span> <span class="hljs-number">12.1</span>gb <span class="hljs-number">12.1</span>gb
+green open graylog_4 <span class="hljs-number">4</span> <span class="hljs-number">0</span> <span class="hljs-number">19861995</span> <span class="hljs-number">0</span> <span class="hljs-number">25.8</span>gb <span class="hljs-number">25.8</span>gb
+green open graylog_3 <span class="hljs-number">4</span> <span class="hljs-number">0</span> <span class="hljs-number">20000058</span> <span class="hljs-number">0</span> <span class="hljs-number">15.1</span>gb <span class="hljs-number">15.1</span>gb
+green open graylog_2 <span class="hljs-number">4</span> <span class="hljs-number">0</span> <span class="hljs-number">20005237</span> <span class="hljs-number">0</span> <span class="hljs-number">16.3</span>gb <span class="hljs-number">16.3</span>gb
 </code></pre>
-<p>&#x53EA;&#x6709;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;work</p>
-<pre><code class="lang-bash">[root@<span class="hljs-number">1</span>e5f9bfda01d /]<span class="hljs-comment">#cat /etc/redhat-release </span>
-CentOS Linux release <span class="hljs-number">7.2</span>.<span class="hljs-number">1511</span> (Core)
+<h3 id="&#x89E3;&#x51B3;&#x529E;&#x6CD5;">&#x89E3;&#x51B3;&#x529E;&#x6CD5;</h3>
+<p>&#x5220;&#x9664;&#x7D22;&#x5F15;</p>
+<pre><code class="lang-bash">root@<span class="hljs-number">9</span>f0273e5be42:/usr/share/elasticsearch<span class="hljs-comment"># curl -XDELETE -v http://localhost:9200/graylog_2</span>
+* Hostname was NOT found <span class="hljs-keyword">in</span> DNS cache
+*   Trying ::<span class="hljs-number">1</span>...
+* Connected to localhost (::<span class="hljs-number">1</span>) port <span class="hljs-number">9200</span> (<span class="hljs-comment">#0)</span>
+&gt; DELETE /graylog_2 HTTP/<span class="hljs-number">1.1</span>
+&gt; User-Agent: curl/<span class="hljs-number">7.38</span>.<span class="hljs-number">0</span>
+&gt; Host: localhost:<span class="hljs-number">9200</span>
+&gt; Accept: */*
+&gt;
+&lt; HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK
+&lt; Content-Type: application/json; charset=UTF-<span class="hljs-number">8</span>
+&lt; Content-Length: <span class="hljs-number">21</span>
+&lt;
+* Connection <span class="hljs-comment">#0 to host localhost left intact</span>
+{<span class="hljs-string">&quot;acknowledged&quot;</span>:<span class="hljs-literal">true</span>}
+
+[root@iZ94ej7xzenZ indices]<span class="hljs-comment"># df -h</span>
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        <span class="hljs-number">40</span>G  <span class="hljs-number">1.5</span>G   <span class="hljs-number">36</span>G   <span class="hljs-number">4</span>% /
+devtmpfs        <span class="hljs-number">3.9</span>G     <span class="hljs-number">0</span>  <span class="hljs-number">3.9</span>G   <span class="hljs-number">0</span>% /dev
+tmpfs           <span class="hljs-number">3.9</span>G     <span class="hljs-number">0</span>  <span class="hljs-number">3.9</span>G   <span class="hljs-number">0</span>% /dev/shm
+tmpfs           <span class="hljs-number">3.9</span>G   <span class="hljs-number">97</span>M  <span class="hljs-number">3.8</span>G   <span class="hljs-number">3</span>% /run
+tmpfs           <span class="hljs-number">3.9</span>G     <span class="hljs-number">0</span>  <span class="hljs-number">3.9</span>G   <span class="hljs-number">0</span>% /sys/fs/cgroup
+/dev/vdb         <span class="hljs-number">99</span>G   <span class="hljs-number">15</span>G   <span class="hljs-number">80</span>G  <span class="hljs-number">16</span>% /data
+tmpfs           <span class="hljs-number">783</span>M     <span class="hljs-number">0</span>  <span class="hljs-number">783</span>M   <span class="hljs-number">0</span>% /run/user/<span class="hljs-number">1000</span>
+</code></pre>
+<h3 id="&#x91CD;&#x542F;graylog">&#x91CD;&#x542F;graylog</h3>
+<pre><code class="lang-bash">[root@iZ94ej7xzenZ ~]<span class="hljs-comment"># docker restart 03ca37afdfb5</span>
+<span class="hljs-number">03</span>ca37afdfb5
 </code></pre>
 
                     
@@ -381,10 +418,8 @@ CentOS Linux release <span class="hljs-number">7.2</span>.<span class="hljs-numb
         </div>
 
         
-        <a href="../../2016/05/update_nodejs.html" class="navigation navigation-prev " aria-label="Previous page: 升级nodejs"><i class="fa fa-angle-left"></i></a>
+        <a href="../../2016/09/jumpserver_aws_ec2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 使用Jumpserver连接AWS的EC2"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../../2016/05/install_playframework_on_mac.html" class="navigation navigation-next " aria-label="Next page: mac下安装play!框架运行环境"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
