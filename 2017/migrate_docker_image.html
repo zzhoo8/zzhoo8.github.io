@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>解决Gitlab forbidden问题 · GitBook</title>
+        <title>迁移gitlab runner · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="migrate_docker_image.html" />
     
-    
-    <link rel="prev" href="../2016/12/sync_calendar_between_mac_and_phone.html" />
+    <link rel="prev" href="gitlab_forbidden.html" />
     
 
     </head>
@@ -310,7 +308,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.18" data-path="gitlab_forbidden.html">
+        <li class="chapter " data-level="1.18" data-path="gitlab_forbidden.html">
             
                 <a href="gitlab_forbidden.html">
             
@@ -323,7 +321,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="migrate_docker_image.html">
+        <li class="chapter active" data-level="1.19" data-path="migrate_docker_image.html">
             
                 <a href="migrate_docker_image.html">
             
@@ -366,7 +364,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >解决Gitlab forbidden问题</a>
+        <a href=".." >迁移gitlab runner</a>
     </h1>
 </div>
 
@@ -381,45 +379,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x89E3;&#x51B3;gitlab-forbidden&#x95EE;&#x9898;">&#x89E3;&#x51B3;Gitlab forbidden&#x95EE;&#x9898;</h1>
-<p>&gt;</p>
-<h2 id="&#x95EE;&#x9898;">&#x95EE;&#x9898;</h2>
-<p>&#x4ECE;&#x4EFB;&#x4F55;&#x5916;&#x90E8;&#x4E3B;&#x673A;&#x8BBF;&#x95EE;Gitlab&#x90FD;&#x8FD4;&#x56DE;forbidden</p>
-<pre><code class="lang-bash">[root@iZ94q9yb0qaZ nginx]<span class="hljs-comment"># curl -v 172.18.0.8:10080</span>
-* About to connect() to 172.18.0.8 port 10080
-*   Trying 172.18.0.8...
-* Connected to 172.18.0.8 (172.18.0.8) port 10080
-&gt; GET / HTTP/1.1
-&gt; User-Agent: curl/7.29.0
-&gt; Host: 172.18.0.8:10080
-&gt; Accept: */*
-&gt;
-&lt; HTTP/1.1 403 Forbidden
-&lt; Server: nginx
-&lt; Date: Thu, 20 Jul 2017 09:01:30 GMT
-&lt; Content-Type: text/plain
-&lt; Content-Length: 10
-&lt; Connection: keep-alive
-&lt; Cache-Control: no-cache
-&lt; X-Request-Id: 3400e1a0-08d7-4d6b-95ee-ab2ab927dd0c
-&lt; X-Runtime: 0.000882
-&lt;
-Forbidden
-* Connection 0 to host 172.18.0.8 left intact
+                                <h1 id="&#x8FC1;&#x79FB;docker-image">&#x8FC1;&#x79FB;docker image</h1>
+<blockquote>
+<p>&#x8FC1;&#x79FB;gitlab runner&#x662F;&#x6700;&#x5FEB;&#x6377;&#x7684;&#x65B9;&#x5F0F;</p>
+</blockquote>
+<h2 id="&#x5BFC;&#x51FA;&#x955C;&#x50CF;&#x6587;&#x4EF6;">&#x5BFC;&#x51FA;&#x955C;&#x50CF;&#x6587;&#x4EF6;</h2>
+<pre><code class="lang-bash">[root@izuf61ti9rpeoonxpwma9rz ~]<span class="hljs-comment"># docker images</span>
+192.168.0.228:5000/gitlab-runner-jdk8-android   latest              902835a49960        4 weeks ago         1.22 GB
+192.168.0.228:5000/gitlab-runner-jdk8-docker    latest              1b2f6feb2946        4 weeks ago         892 MB
+192.168.0.228:5000/gitlab-runner-jdk8           latest              72c3b15142f6        4 weeks ago         767 MB
+192.168.0.228:5000/gitlab-runner                latest              fab3c81ed263        4 weeks ago         484 MB
+192.168.0.228:5000/yyzzb/jdk8                   latest              1b13b72a06c3        3 months ago        509 MB
+yyzzb/jdk8                                      latest              1b13b72a06c3        3 months ago        509 MB
+registry                                        latest              136c8b16df20        3 months ago        33.2 MB
+192.168.0.228:5000/centos                       7.3.1611            67591570dd29        7 months ago        192 MB
+[root@izuf61ti9rpeoonxpwma9rz ~]<span class="hljs-comment"># docker save 1b2f6feb2946 &gt; /tmp/gitlab-runner-jdk8-docker.tar</span>
 </code></pre>
-<h2 id="&#x89E3;&#x51B3;">&#x89E3;&#x51B3;</h2>
-<p>&#x8FDB;&#x5165;Gitlab&#x7684;container&#x4E2D;&#xFF0C;&#x8F93;&#x5165;</p>
-<pre><code class="lang-bash">root@repo:/<span class="hljs-comment"># /opt/gitlab/embedded/bin/redis-cli -s /var/opt/gitlab/redis/redis.socket --scan | grep rack::attack</span>
-cache:gitlab:rack::attack:allow2ban:ban:172.18.0.2
+<h2 id="&#x5BFC;&#x5165;&#x955C;&#x50CF;&#x6587;&#x4EF6;">&#x5BFC;&#x5165;&#x955C;&#x50CF;&#x6587;&#x4EF6;</h2>
+<pre><code class="lang-bash">[root@izuf69efm3utblsuuagchyz ~]<span class="hljs-comment"># docker load &lt; /tmp/gitlab-runner-jdk8-android.tar</span>
+34e7b85d83e4: Loading layer [==================================================&gt;]  199.9MB/199.9MB
+344103eb3688: Loading layer [==================================================&gt;]    298MB/298MB
+547f4e23f2e7: Loading layer [==================================================&gt;]  205.5MB/205.5MB
+69af8a559213: Loading layer [==================================================&gt;]   79.5MB/79.5MB
+9def131fcdf8: Loading layer [==================================================&gt;]  457.7MB/457.7MB
+Loaded image ID: sha256:902835a4996007792d3421245bbf6f2232a26e1b30985af2f0b20668610162ef
 </code></pre>
-<p>&#x5220;&#x9664;rack&#x673A;&#x5236;&#x4EA7;&#x751F;&#x7684;key&#x5373;&#x53EF;</p>
-<pre><code class="lang-bash">redis /var/opt/gitlab/redis/redis.socket&gt; del cache:gitlab:rack::attack:allow2ban:ban:172.18.0.2
-(<span class="hljs-built_in">integer</span>) 1
+<p>&#x91CD;&#x547D;&#x540D;&#x955C;&#x50CF;</p>
+<pre><code class="lang-bash">[root@izuf69efm3utblsuuagchyz ~]<span class="hljs-comment"># docker tag 902835a49960 gitlab-runner-jdk8-android:latest</span>
 </code></pre>
-<p>Bingo</p>
 <h2 id="&#x8D44;&#x6599;">&#x8D44;&#x6599;</h2>
 <ul>
-<li><a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/1171" target="_blank">Gitlab sending a 403 forbidden at random after 7.8.1 upgrade</a></li>
+<li><a href="http://www.simapple.com/331.html" target="_blank">docker load&#x547D;&#x4EE4;-&#x52A0;&#x8F7D;image</a></li>
 </ul>
 
                                 
@@ -448,14 +438,10 @@ cache:gitlab:rack::attack:allow2ban:ban:172.18.0.2
 
             
                 
-                <a href="../2016/12/sync_calendar_between_mac_and_phone.html" class="navigation navigation-prev " aria-label="Previous page: 在MAC和安卓手机之间同步日历">
+                <a href="gitlab_forbidden.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 解决Gitlab forbidden问题">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="migrate_docker_image.html" class="navigation navigation-next " aria-label="Next page: 迁移gitlab runner">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -464,7 +450,7 @@ cache:gitlab:rack::attack:allow2ban:ban:172.18.0.2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"解决Gitlab forbidden问题","level":"1.18","depth":1,"next":{"title":"迁移gitlab runner","level":"1.19","depth":1,"path":"2017/migrate_docker_image.md","ref":"2017/migrate_docker_image.md","articles":[]},"previous":{"title":"在MAC和安卓手机之间同步日历","level":"1.17","depth":1,"path":"2016/12/sync_calendar_between_mac_and_phone.md","ref":"2016/12/sync_calendar_between_mac_and_phone.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2017/gitlab_forbidden.md","mtime":"2017-07-20T09:14:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-20T15:26:02.074Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"迁移gitlab runner","level":"1.19","depth":1,"previous":{"title":"解决Gitlab forbidden问题","level":"1.18","depth":1,"path":"2017/gitlab_forbidden.md","ref":"2017/gitlab_forbidden.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2017/migrate_docker_image.md","mtime":"2017-07-20T15:24:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-20T15:26:02.074Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

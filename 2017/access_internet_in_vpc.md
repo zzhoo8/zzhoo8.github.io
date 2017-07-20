@@ -43,6 +43,14 @@ iptables -t nat -D POSTROUTING -s 192.168.0.0/24 -j SNAT --to-source 192.168.0.2
 
 查询SNAT情况`iptables  -t  nat  -nL`
 
+清除iptables
+
+```bash
+iptables -F
+iptables -X
+iptables -Z
+```
+
 ## 阿里云控制面板中配置
 
 在阿里云控制面板中的VPC中增加一条路由
